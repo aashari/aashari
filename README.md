@@ -12,5 +12,5 @@
 - 🏢 I'm currently working at **Traveloka**
 - ⚙️ I use daily: `.tf`, `.js`, `.php`, `.python`, `.sh`, `.go`
 - 🌍 I'm mostly active within the **Traveloka Community**
-- 💬 Ping me about **cloud**, **development**
+- 💬 Ping me about **cloud infrastructure**, **software development**
 - ⚡️ Fun fact: I created many usefull tools used globally secretly :D
