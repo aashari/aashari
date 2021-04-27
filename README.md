@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-I'm a Cloud Infrastructure Engineer working in Indonesia, I like Sci-Fi movie and love to travel anywhere explore something new
+I'm a Cloud Infrastructure Engineer working in Indonesia, I like Sci-Fi movie and drink a lot of coffee, I love to travel and explore something new
 
 
 [![Linkedin Badge](https://img.shields.io/badge/-aashari-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/aashari/)](https://www.linkedin.com/in/aashari/)
