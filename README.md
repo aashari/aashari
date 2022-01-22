@@ -14,6 +14,3 @@ I'm a Cloud Infrastructure Engineer working in Indonesia, I like Sci-Fi movie an
 - 🌍 I'm mostly active within the **Traveloka Community**
 - 💬 Ping me about **cloud infrastructure**, **software development**
 - ⚡️ Fun fact: I created many usefull tools used globally secretly :D
-
-##### I like music too, you can see live the music I'm playing here
-[![spotify-github-profile](https://spotify-github-profile.vercel.app/api/view?uid=217yxh56xvajymbzxicodm5oq&cover_image=false&theme=default)](https://github.com/kittinan/spotify-github-profile)
