@@ -13,4 +13,10 @@ I'm a Cloud Infrastructure Engineer working in Indonesia, I like Sci-Fi movie an
 - ⚙️ I use daily: `.tf`, `.js`, `.php`, `.python`, `.sh`, `.go`
 - 🌍 I'm mostly active within the **Traveloka Community**
 - 💬 Ping me about **cloud infrastructure**, **software development**
-- ⚡️ Fun fact: I created many usefull tools used globally secretly :D
+
+##### Active Public Repositories
+
+- [aashari/boilerplate-lambda-typescript](https://github.com/aashari/boilerplate-lambda-typescript)
+- [aashari/nodejs-geocoding](https://github.com/aashari/nodejs-geocoding)
+- [aashari/terraform-aws-static-website](https://github.com/aashari/terraform-aws-static-website)
+- [aashari/terraform-gcp-cloud-run](https://github.com/aashari/terraform-gcp-cloud-run)
