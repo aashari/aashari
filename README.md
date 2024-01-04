@@ -18,6 +18,7 @@ I'm a Cloud Infrastructure Engineer working in Indonesia, I like Sci-Fi movie an
 
 - [aashari/boilerplate-kubernetes](https://github.com/aashari/boilerplate-kubernetes)
 - [aashari/boilerplate-lambda-typescript](https://github.com/aashari/boilerplate-lambda-typescript)
+- [aashari/boilerplate-rest-api-bun](https://github.com/aashari/boilerplate-rest-api-bun)
 - [aashari/nodejs-geocoding](https://github.com/aashari/nodejs-geocoding)
 - [aashari/terraform-aws-static-website](https://github.com/aashari/terraform-aws-static-website)
 - [aashari/terraform-gcp-cloud-run](https://github.com/aashari/terraform-gcp-cloud-run)
