@@ -9,9 +9,9 @@ I'm a Cloud Infrastructure Engineer working in Indonesia, I like Sci-Fi movie an
 
 ##### BIO
 
-- 🏢 I'm currently working at **Traveloka**
+- 🏢 I'm currently working at **GovTech, Indonesia**
 - ⚙️ I use daily: `.tf`, `.js`, `.php`, `.python`, `.sh`, `.go`
-- 🌍 I'm mostly active within the **Traveloka Community**
+- 🌍 I'm mostly active within the **GovTech Community**
 - 💬 Ping me about **cloud infrastructure**, **software development**
 
 ##### Active Public Repositories
