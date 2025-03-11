@@ -216,11 +216,13 @@ html {
 }
 
 footer {
-  padding: 2rem 0;
+  margin-top: 2rem;
+  transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
   footer {
+    margin-top: 1.5rem;
     padding: 1.5rem 0;
   }
 }
