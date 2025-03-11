@@ -1,13 +1,16 @@
 <div align="center">
   <h1>👋 Hey, I’m Andi Ashari!</h1>
-  <p>AI Operations and Engineering | Cloud Enthusiast | Sci-Fi Lover</p>
-  <p>Based in Indonesia, I blend AI, infrastructure, and a good cup of coffee to build awesome things.</p>
-  
+  <p><strong>Tech Wanderer | AI Operations & Engineering | Cloud Innovator</strong></p>
+  <p>Based in Indonesia, I’m redefining the digital landscape with AI, infrastructure, and a love for sci-fi.</p>
+
   <a href="https://www.linkedin.com/in/aashari/">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
   <a href="https://www.instagram.com/ant.dhe/">
     <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/>
+  </a>
+  <a href="https://medium.com/@aashari">
+    <img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" alt="Medium"/>
   </a>
   <a href="mailto:a.ashari1302@gmail.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
@@ -16,57 +19,59 @@
 
 ---
 
-### 🚀 About Me
+### 🌟 Who I Am
 - **Role**: AI Operations and Engineering  
-- **Tech I Love**: Terraform (`.tf`), TypeScript/JavaScript (`.js`), Golang (`.go`), Python (`.py`), Bash (`.sh`)  
-- **Focus**: Cloud infrastructure, AI automation, and scalable systems  
-- **Hobbies**: Watching sci-fi movies (*Interstellar* is my jam!) and drinking way too much ☕  
+- **Mission**: Actively redefining the digital landscape through cutting-edge solutions  
+- **Tech Stack**: `.tf` (Terraform), `.js` (TypeScript/JavaScript), `.go` (Golang), `.py` (Python), `.sh` (Bash)  
+- **Passions**: Cloud architecture, AI automation, scalable systems, and sci-fi adventures  
 
 ---
 
-### 🛠️ What I’m Building
-Here’s a peek at my latest projects:
+### 🛠️ My Creations
+Here’s what I’ve been crafting lately:
 
-#### 🌐 Cloud & Infrastructure
+#### ☁️ Cloud & Infrastructure
 - **[terraform-gcp-cloud-run](https://github.com/aashari/terraform-gcp-cloud-run)**  
-  Terraform module for Google Cloud Run with scaling, VPC, and health checks.  
-- **[rag-aws-ssm](https://github.com/aashari/rag-aws-ssm)**  
-  CLI tool for AWS SSM command execution and file transfers—AI-ready!  
+  A robust Terraform module for Google Cloud Run with advanced scaling and networking options.  
+- **[terraform-aws-static-website](https://github.com/aashari/terraform-aws-static-website)**  
+  Deploy static websites on AWS S3 and CloudFront with custom domain support.  
 
 #### 🤖 AI & Automation
 - **[rag-browser](https://github.com/aashari/rag-browser)**  
-  Browser automation with Playwright and Bun, built for humans and AI alike.  
+  Browser automation tool with Playwright and Bun—perfect for humans and AI workflows.  
 - **[nodejs-geocoding](https://github.com/aashari/nodejs-geocoding)**  
-  Lightweight geocoding library in TypeScript with zero dependencies.  
+  Lightweight TypeScript library for geocoding and reverse geocoding, no dependencies needed.  
 
-#### 📦 Boilerplates
-- **[boilerplate-rest-api-bun](https://github.com/aashari/boilerplate-rest-api-bun)**  
-  REST API starter with Bun, Elysia, and MongoDB.  
-- **[boilerplate-kubernetes](https://github.com/aashari/boilerplate-kubernetes)**  
-  GKE deployment with Terraform and GitHub Actions.  
+#### 📚 Boilerplates & Templates
 - **[boilerplate-lambda-typescript](https://github.com/aashari/boilerplate-lambda-typescript)**  
-  TypeScript AWS Lambda with Terraform and Datadog integration.  
+  TypeScript AWS Lambda starter with Terraform, DynamoDB, and Datadog integration.  
+- **[boilerplate-kubernetes](https://github.com/aashari/boilerplate-kubernetes)**  
+  GKE deployment boilerplate with Terraform and GitHub Actions, featuring Go and Node.js.  
+- **[boilerplate-rest-api-bun](https://github.com/aashari/boilerplate-rest-api-bun)**  
+  Fast REST API boilerplate using Bun, Elysia, and MongoDB.  
 
 ---
 
-### 📊 My GitHub Vibes
+### 📈 GitHub Snapshot
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=aashari&show_icons=true&theme=dracula" alt="GitHub Stats" width="420"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=aashari&layout=compact&theme=dracula" alt="Top Languages" width="300"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=aashari&show_icons=true&theme=tokyonight" alt="GitHub Stats" width="420"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=aashari&layout=compact&theme=tokyonight" alt="Top Languages" width="300"/>
 </div>
 
 ---
 
-### 🌟 Fun Bits
-- **Sci-Fi Obsession**: *Interstellar*—space, tech, and emotions, oh my!  
-- **Coffee Fuel**: I’ve lost count of my daily cups.  
-- **Next Adventure**: Diving deeper into AI-powered infrastructure.  
+### 🎉 Life Beyond Code
+- **Sci-Fi Fix**: *Interstellar*—space exploration meets human emotion.  
+- **Coffee Ritual**: Fueling innovation, one cup at a time.  
+- **Next Quest**: Pushing the boundaries of AI-driven infrastructure.  
 
 ---
 
-### 💬 Let’s Connect!
-Got a wild idea about AI, cloud, or coffee? Hit me up! Explore my repos and let’s create something epic together.
+### 🌍 Let’s Build Together!
+Passionate about AI, cloud, or just want to chat tech over coffee? Reach out!  
+- **Read my thoughts**: [Medium](https://medium.com/@aashari)  
+- **Explore my work**: [GitHub](https://github.com/aashari)  
 
 <div align="center">
-  <i>“The only way to do great work is to love what you do.” – Steve Jobs</i>
+  <i>“Innovation distinguishes between a leader and a follower.” – Steve Jobs</i>
 </div>
