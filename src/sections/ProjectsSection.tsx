@@ -9,7 +9,7 @@ export default function ProjectsSection() {
   return (
     <Section title="My Projects" icon={<HiSparkles className="icon-primary mr-2" size={24} />} id="projects">
       <div className="space-y-6 grid grid-cols-1">
-        <div className="card w-full">
+        <div className="card interactive-card w-full">
           <h3 className="text-xl mb-4 flex items-center gap-2">
             <FaBrain className="icon-primary" /> 
             Brainy Buddy

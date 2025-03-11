@@ -1,37 +1,74 @@
 /* Theme toggle button */
 .theme-toggle {
-  /* Base styles are now applied inline in the component */
+  position: fixed;
+  /* Position and size now controlled by props */
+  /* Default values as fallbacks */
+  top: var(--space-lg);
+  right: var(--space-lg);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Width and height now controlled by props */
+  width: var(--button-size-lg);
+  height: var(--button-size-lg);
+  border-radius: 50%;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  padding: 0;
+  
+  /* These styles handled by interactive-toggle */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
 }
 
 .theme-toggle:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
-  opacity: 1 !important;
-  border-color: var(--primary) !important;
-  filter: brightness(1.1) !important;
+  /* These hover effects are handled by interactive-toggle */
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+  filter: brightness(1.1);
 }
 
-.theme-toggle:focus-visible {
-  outline: 2px solid var(--primary) !important;
-  outline-offset: 2px !important;
-  opacity: 1 !important;
+/* Focus styles are now handled by interactive-toggle:focus-visible */
+/* Remove this duplicated rule and use className="theme-toggle interactive-toggle" */
+
+.theme-toggle-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease;
+}
+
+.theme-toggle-icon.rotating {
+  transform: rotate(180deg);
 }
 
 .theme-toggle-placeholder {
   position: fixed;
-  top: 1rem;
-  right: 1rem;
-  width: 44px;
-  height: 44px;
+  /* Position and size controlled by props - same as .theme-toggle */
+  top: var(--space-lg);
+  right: var(--space-lg);
+  width: var(--button-size-lg);
+  height: var(--button-size-lg);
   z-index: 100;
 }
 
+/* Fallback responsive behavior for backward compatibility */
 @media (max-width: 768px) {
-  .theme-toggle-placeholder {
-    top: 0.75rem;
-    right: 0.75rem;
-    width: 40px;
-    height: 40px;
+  .theme-toggle:not([class*="w-"]):not([class*="h-"]) {
+    top: var(--space-md);
+    right: var(--space-md);
+    width: var(--button-size-md);
+    height: var(--button-size-md);
+  }
+  
+  .theme-toggle-placeholder:not([class*="w-"]):not([class*="h-"]) {
+    top: var(--space-md);
+    right: var(--space-md);
+    width: var(--button-size-md);
+    height: var(--button-size-md);
   }
 } 
 

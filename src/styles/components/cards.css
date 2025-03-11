@@ -1,20 +1,25 @@
 .card {
-  background: var(--card);
-  border: 1px solid var(--border);
+  /* Component-specific styles */
   border-radius: var(--radius-md);
-  padding: var(--space-xl);
+  padding: var(--space-lg);
+  background: var(--card);
+  
+  /* These styles are now handled by interactive-card utility class */
+  /* Add the interactive-card class in the JSX */
+  border: 1px solid var(--border);
   transition: all 0.2s ease;
-  box-shadow: 0 2px 5px var(--shadow);
+  box-shadow: var(--shadow-sm);
 }
 
 .card:hover {
+  /* These styles are now handled by interactive-card utility class */
   border-color: var(--primary);
-  box-shadow: 0 4px 8px var(--shadow);
+  box-shadow: var(--shadow-md);
 }
 
 @media (max-width: 768px) {
   .card {
-    padding: var(--space-lg); /* Slightly reduced padding on mobile */
+    padding: var(--space-md); /* Reduced padding on mobile */
   }
 } 
 

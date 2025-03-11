@@ -15,6 +15,9 @@ interface RepositoryProps {
   isForked?: boolean;
   license?: string;
   lastUpdated?: string;
+  variant?: 'default' | 'compact' | 'detailed';
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
 }
 
 export default function Repository({
@@ -26,6 +29,9 @@ export default function Repository({
   isArchived = false,
   isTemplate = false,
   isForked = false,
+  variant = 'default',
+  size = 'md',
+  className = '',
 }: RepositoryProps) {
   // Function to get language icon
   const getLanguageIcon = (lang: string) => {
@@ -51,10 +57,24 @@ export default function Repository({
     }
   };
 
+  // Size-specific styles
+  const sizeClasses = {
+    sm: 'p-3 text-sm',
+    md: 'p-5 text-base',
+    lg: 'p-6 text-lg',
+  };
+
+  // Variant-specific styles
+  const variantClasses = {
+    default: '',
+    compact: 'max-h-40 overflow-hidden',
+    detailed: 'h-full',
+  };
+
   const badgeClasses = "h-6 flex items-center text-xs px-2 py-1 rounded-md border";
 
   return (
-    <div className="card w-full hover:shadow-md transition-shadow duration-300 p-5 dark:bg-gray-800/50">
+    <div className={`card interactive-card w-full ${sizeClasses[size]} ${variantClasses[variant]} ${className}`}>
       <div className="flex items-start justify-between mb-3">
         <h3 className="text-xl font-semibold flex items-center">
           <FaGithub className="icon-primary text-lg mr-2.5 dark:text-primary/90" aria-hidden="true" />
@@ -62,7 +82,7 @@ export default function Repository({
             href={url} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="hover:text-primary transition-colors dark:text-white dark:hover:text-primary/90"
+            className="text-foreground transition-colors focus-outline hover-border-primary"
           >
             {name}
           </Link>

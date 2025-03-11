@@ -104,13 +104,82 @@
 .bg-card { background-color: var(--card); }
 
 /* Shadow utilities */
-.shadow-standard { box-shadow: 0 2px 5px var(--shadow); }
-.shadow-hover { box-shadow: 0 4px 8px var(--shadow); }
-.shadow-lg { box-shadow: 0 10px 15px var(--shadow); }
-.shadow-\[rgba\(74\,144\,226\,0\.3\)\] { box-shadow: 0 4px 8px rgba(74,144,226,0.3); }
+.shadow-standard { box-shadow: var(--shadow-sm); }
+.shadow-hover { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-blue { box-shadow: var(--shadow-md); }
 
 /* Transition utilities */
 .transition-standard { transition: all 0.2s ease; }
+.transition-all { transition: all 0.2s ease; }
+.transition-transform { transition: transform 0.2s ease; }
+
+/* Hover effect utilities */
+.hover-lift-sm:hover { transform: translateY(-1px); }
+.hover-lift-md:hover { transform: translateY(-2px); }
+.hover-scale:hover { transform: scale(1.02); }
+.hover-border-primary:hover { border-color: var(--primary); }
+.hover-brightness:hover { filter: brightness(1.1); }
+.hover-shadow:hover { box-shadow: var(--shadow-md); }
+
+/* Focus effect utilities */
+.focus-outline:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+.focus-outline-hover:focus-visible {
+  outline: 2px solid var(--hover);
+  outline-offset: 2px;
+}
+
+/* Combined interaction utilities */
+.interactive-card {
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+.interactive-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+.interactive-card:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.interactive-button {
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+}
+.interactive-button:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+.interactive-button:focus-visible {
+  outline: 2px solid var(--hover);
+  outline-offset: 2px;
+}
+
+.interactive-toggle {
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+}
+.interactive-toggle:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+  filter: brightness(1.1);
+}
+.interactive-toggle:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Additional utilities */
+.cursor-pointer { cursor: pointer; }
 
 /* Media queries for utilities */
 @media (min-width: 768px) {

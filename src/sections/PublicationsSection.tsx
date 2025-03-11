@@ -8,8 +8,8 @@ import SocialLink from "../components/SocialLink";
 export default function PublicationsSection() {
   return (
     <Section title="Publications" icon={<HiSparkles className="icon-primary mr-2" size={24} />} id="publications">
-      <div className="space-y-6 grid grid-cols-1">
-        <div className="card w-full">
+      <div className="space-y-6 grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="card interactive-card w-full">
           <h3 className="text-xl mb-4 flex items-center gap-2"><FaBook className="icon-primary" size={24} /> A Design of Crowd-Based Corruption Prevention System in Indonesia</h3>
           <p className="mb-4">2019 International Conference on Information Management and Technology (ICIMTech) · Aug 1, 2019</p>
           <p className="mb-4">Combatting corruption requires not only centralized and institution-based strategy, but must be met with distributive effort supported by abundance of data and technological advancement. This work tackles the issue of decentralized corruption prevention by describing the method of doing heuristic analysis based on multiple data regarding corruption.</p>
@@ -18,7 +18,7 @@ export default function PublicationsSection() {
           </div>
         </div>
 
-        <div className="card w-full">
+        <div className="card interactive-card w-full">
           <h3 className="text-xl mb-4 flex items-center gap-2"><FaBook className="icon-primary" size={24} /> Systematic literature review on corruption prevention efforts towards sustainable economy in Indonesia</h3>
           <p className="mb-4">IOP Conference Series: Earth and Environmental Science · Dec 14, 2018</p>
           <p className="mb-4">Corruption is an extraordinary crime and must be eradicated not only as fast as possible, but also as efficient and as effective as possible as it hinders the process of achieving sustainable economy. In current modern society, information technology exists as a multidisciplinary tool to solve lingering problems that could not be solved by traditional efforts.</p>
@@ -27,7 +27,7 @@ export default function PublicationsSection() {
           </div>
         </div>
 
-        <div className="card w-full">
+        <div className="card interactive-card w-full">
           <h3 className="text-xl mb-4 flex items-center gap-2"><FaBook className="icon-primary" size={24} /> Development of a Web Based Corruption Case Mapping Using Machine Learning with Artificial Neural Network</h3>
           <p className="mb-4">2018 International Conference on Information Management and Technology (ICIMTech) · Sep 1, 2018</p>
           <p className="mb-4">This work focuses on the development of a web application aimed to provide insight to corruption case per province in Indonesia. The web application was developed using Machine Learning, specifically Backpropagation Artificial Neural Network (ANN). Web crawling and web scraping techniques are used to gather news content from 7 major news portal in Indonesia.</p>
@@ -36,7 +36,7 @@ export default function PublicationsSection() {
           </div>
         </div>
 
-        <div className="card w-full">
+        <div className="card interactive-card w-full">
           <h3 className="text-xl mb-4 flex items-center gap-2"><FaBook className="icon-primary" size={24} /> Indonesian teacher engagement index (ITEI): Decision support system for education</h3>
           <p className="mb-4">2017 5th International Conference on Cyber and IT Service Management (CITSM) · Aug 1, 2017</p>
           <p className="mb-4">Indonesian Teacher Engagement Index (ITEI) is an instrument designed to help teachers to detect themselves through self diagnostic. The results of self-diagnostic is then systemally developed with the goal of becoming a decision support system for the central government to the areas in the field of education.</p>
@@ -45,7 +45,7 @@ export default function PublicationsSection() {
           </div>
         </div>
 
-        <div className="card w-full">
+        <div className="card interactive-card w-full">
           <h3 className="text-xl mb-4 flex items-center gap-2"><FaBook className="icon-primary" size={24} /> Corruption Cases Mapping Based on Indonesia&apos;s Corruption Perception Index</h3>
           <p className="mb-4">Journal of Physics: Conference Series · Jan 1, 2017</p>
           <p className="mb-4">Government plays an important role in nation economic growth. Nevertheless, there are still many occurrences of government officers abusing their offices to do an act of corruption. To develop the mapping system, researchers use Naïve Bayes Classifier to classify which news articles talk about corruption and which news articles are not.</p>
@@ -54,7 +54,7 @@ export default function PublicationsSection() {
           </div>
         </div>
 
-        <div className="card w-full">
+        <div className="card interactive-card w-full">
           <h3 className="text-xl mb-4 flex items-center gap-2"><FaBook className="icon-primary" size={24} /> Corruption Early Prevention: Decision Support System for President of the Republic of Indonesia</h3>
           <p className="mb-4">Journal of Physics: Conference Series · Jan 1, 2017</p>
           <p className="mb-4">Corruption is an extraordinary crime, and then the prevention must also be extraordinary, simultaneously (national) in the form of early warning that involves all elements; government, industry, and society. To realize it the system needs to be built which in this study is called the Corruption Early Prevention (CEP) as a Decision Support System for President of the Republic of Indonesia.</p>

@@ -24,6 +24,11 @@
   --icon-md: 20px;
   --icon-lg: 24px;
   
+  /* Button sizes */
+  --button-size-sm: 36px;
+  --button-size-md: 40px;
+  --button-size-lg: 44px;
+  
   /* Border radius */
   --radius-sm: 4px;
   --radius-md: 8px;

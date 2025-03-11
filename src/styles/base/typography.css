@@ -114,7 +114,7 @@ ul li::before {
 /* Profile image specific styling */
 .profile-image {
   border-radius: var(--radius-full);
-  box-shadow: 0 4px 8px rgba(74,144,226,0.3);
+  box-shadow: var(--shadow-md);
 }
 
 /* Icon styling */

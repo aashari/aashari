@@ -2,20 +2,23 @@
 .tech-badge {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-md);
-  padding: var(--space-sm) var(--space-lg);
-  border: 1px solid var(--border);
+  /* gap moved to component props */
+  /* padding moved to component props */
   border-radius: var(--radius-sm);
-  background: var(--card);
   color: var(--foreground);
   text-decoration: none;
+  
+  /* Interactive styles handled by interactive-card */
+  border: 1px solid var(--border);
+  background: var(--card);
   transition: all 0.2s ease;
-  box-shadow: 0 1px 3px var(--shadow);
+  box-shadow: var(--shadow-sm);
 }
 
-/* Specific styling for buttons inside cards */
-.card .social-link {
-  padding: calc(var(--space-sm) * 0.8) calc(var(--space-lg) * 0.8);
+/* These specific styles can now be controlled via props */
+/* Keeping them as fallbacks for backward compatibility */
+.card .social-link:not([class*="py-"]):not([class*="px-"]) {
+  padding: var(--space-xs) var(--space-md);
   font-size: var(--text-sm);
 }
 
@@ -26,23 +29,23 @@
 
 .social-link:hover,
 .tech-badge:hover {
+  /* Standard interactive-card hover effects */
   border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+  
+  /* Additional hover effects */
   transform: scale(1.02);
-  box-shadow: 0 2px 4px var(--shadow);
   color: var(--hover);
 }
 
-.social-link:focus-visible,
-.tech-badge:focus-visible {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
-  border-color: var(--primary);
-}
+/* Focus styles are now handled by interactive-card:focus-visible */
+/* Remove this duplicated rule and use className="social-link interactive-card" */
 
+/* Responsive fallbacks for backward compatibility */
 @media (max-width: 768px) {
-  .social-link,
-  .tech-badge {
-    padding: var(--space-sm) var(--space-md); /* Slightly reduced padding on mobile */
+  .social-link:not([class*="py-"]):not([class*="px-"]),
+  .tech-badge:not([class*="py-"]):not([class*="px-"]) {
+    padding: var(--space-xs) var(--space-md);
   }
 } 
 

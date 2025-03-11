@@ -3,7 +3,17 @@
 import { useState, useEffect } from 'react';
 import { FaSun, FaMoon } from 'react-icons/fa';
 
-export default function ThemeToggle() {
+interface ThemeToggleProps {
+  size?: 'sm' | 'md' | 'lg';
+  position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left' | 'custom';
+  className?: string;
+}
+
+export default function ThemeToggle({ 
+  size = 'md', 
+  position = 'top-right', 
+  className = '' 
+}: ThemeToggleProps) {
   const [theme, setTheme] = useState<'light' | 'dark' | 'system'>('system');
   const [systemPreference, setSystemPreference] = useState<'light' | 'dark'>('light');
   const [mounted, setMounted] = useState(false);
@@ -92,58 +102,57 @@ export default function ThemeToggle() {
     setTheme(newTheme);
   };
   
-  // Prevent hydration mismatch by not rendering anything until mounted
-  if (!mounted) {
-    return <div className="theme-toggle-placeholder" aria-hidden="true" />;
-  }
-  
   // Determine which icon to show
   const showDarkIcon = theme === 'dark' || (theme === 'system' && systemPreference === 'dark');
   
-  // Button size based on screen size
-  const buttonSize = isMobile ? 40 : 44;
-  const iconSize = isMobile ? 18 : 20;
+  // Icon size based on size prop and screen size
+  const getIconSize = () => {
+    if (isMobile) return size === 'sm' ? 16 : size === 'md' ? 18 : 20;
+    return size === 'sm' ? 18 : size === 'md' ? 20 : 24;
+  };
   
-  // Icon color based on theme - using background colors for contrast
-  const iconColor = !showDarkIcon ? 'rgb(249, 248, 246)' : '#1A2A44';
+  // Size classes mapped to CSS variables
+  const sizeClasses = {
+    sm: 'w-8 h-8',
+    md: 'w-10 h-10',
+    lg: 'w-12 h-12',
+  };
+  
+  // Position classes
+  const positionClasses = {
+    'top-right': 'top-4 right-4',
+    'top-left': 'top-4 left-4',
+    'bottom-right': 'bottom-4 right-4',
+    'bottom-left': 'bottom-4 left-4',
+    'custom': '',
+  };
+  
+  // Icon color based on theme - using CSS variables for color
+  const iconColor = !showDarkIcon ? 'var(--background)' : 'var(--foreground)';
+  
+  // For placeholder when not mounted
+  if (!mounted) {
+    return (
+      <div 
+        className={`theme-toggle-placeholder ${sizeClasses[size]} ${positionClasses[position]} ${className}`} 
+        aria-hidden="true" 
+      />
+    );
+  }
   
   return (
     <button 
       onClick={toggleTheme}
-      className="theme-toggle"
+      className={`theme-toggle interactive-toggle ${sizeClasses[size]} ${positionClasses[position]} ${className}`}
       aria-label={`Switch to ${theme === 'light' ? 'dark' : theme === 'dark' ? 'system' : 'light'} theme`}
       title={`Current theme: ${theme === 'system' ? `System (${systemPreference})` : theme}`}
-      style={{
-        position: 'fixed',
-        top: isMobile ? '0.75rem' : '1rem',
-        right: isMobile ? '0.75rem' : '1rem',
-        zIndex: 100,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: `${buttonSize}px`,
-        height: `${buttonSize}px`,
-        borderRadius: '50%',
-        backgroundColor: 'var(--card)',
-        border: '1px solid var(--border)',
-        boxShadow: '0 2px 5px var(--shadow)',
-        transition: 'all 0.2s ease',
-        cursor: 'pointer',
-        color: iconColor,
-        padding: 0
-      }}
+      style={{ color: iconColor }}
     >
-      <div style={{ 
-        transform: isRotating ? 'rotate(180deg)' : 'rotate(0deg)',
-        transition: 'transform 0.5s ease',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
-      }}>
+      <div className={`theme-toggle-icon ${isRotating ? 'rotating' : ''}`}>
         {showDarkIcon ? (
-          <FaMoon size={iconSize} color={iconColor} />
+          <FaMoon size={getIconSize()} color={iconColor} />
         ) : (
-          <FaSun size={iconSize} color={iconColor} />
+          <FaSun size={getIconSize()} color={iconColor} />
         )}
       </div>
     </button>
