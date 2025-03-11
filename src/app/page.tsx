@@ -154,7 +154,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <Section title="Who I Am" icon={<HiSparkles className="text-[var(--primary)] mr-2" />} id="about">
+      <Section title="Who I Am" icon={<HiSparkles className="text-[var(--primary)] mr-2" size={24} />} id="about">
         <div className="space-y-10">
           <div className="card w-full">
             <h3 className="text-xl mb-4">Professional Focus</h3>
@@ -185,7 +185,7 @@ export default function Home() {
       </Section>
 
       {/* Projects Section */}
-      <Section title="My Projects" icon={<HiSparkles className="text-[var(--primary)] mr-2" />} id="projects">
+      <Section title="My Projects" icon={<HiSparkles className="text-[var(--primary)] mr-2" size={24} />} id="projects">
         <div className="space-y-10">
           <div className="card w-full">
             <h3 className="text-xl mb-4 flex items-center gap-2">
@@ -200,7 +200,7 @@ export default function Home() {
               <li>Optimized for high user engagement and performance</li>
             </ul>
             <div className="mt-4">
-              <SocialLink href="https://brainybuddy.app" icon={<FaGoogle size={20} />} label="Visit Website" ariaLabel="Visit Brainy Buddy website" />
+              <SocialLink href="https://brainybuddy.app" icon={<FaGoogle size={18} />} label="Visit Website" ariaLabel="Visit Brainy Buddy website" />
             </div>
           </div>
           <div className="card w-full">
@@ -212,7 +212,7 @@ export default function Home() {
               <li>Enhanced monitoring with Datadog</li>
             </ul>
             <div className="mt-4">
-              <SocialLink href="https://github.com/aashari/boilerplate-lambda-typescript" icon={<FaGithub size={20} />} label="View on GitHub" ariaLabel="View Boilerplate Lambda TypeScript on GitHub" />
+              <SocialLink href="https://github.com/aashari/boilerplate-lambda-typescript" icon={<FaGithub size={18} />} label="View on GitHub" ariaLabel="View Boilerplate Lambda TypeScript on GitHub" />
             </div>
           </div>
           <div className="card w-full">
@@ -224,7 +224,7 @@ export default function Home() {
               <li>Configurable for various deployment scenarios</li>
             </ul>
             <div className="mt-4">
-              <SocialLink href="https://github.com/aashari/terraform-aws-static-website" icon={<FaGithub size={20} />} label="View on GitHub" ariaLabel="View AWS Static Website Terraform Module on GitHub" />
+              <SocialLink href="https://github.com/aashari/terraform-aws-static-website" icon={<FaGithub size={18} />} label="View on GitHub" ariaLabel="View AWS Static Website Terraform Module on GitHub" />
             </div>
           </div>
           <div className="card w-full">
@@ -236,34 +236,34 @@ export default function Home() {
               <li>Outputs docker image URL and service endpoint</li>
             </ul>
             <div className="mt-4">
-              <SocialLink href="https://github.com/aashari/terraform-gcp-cloud-run" icon={<FaGithub size={20} />} label="View on GitHub" ariaLabel="View Terraform GCP Cloud Run on GitHub" />
+              <SocialLink href="https://github.com/aashari/terraform-gcp-cloud-run" icon={<FaGithub size={18} />} label="View on GitHub" ariaLabel="View Terraform GCP Cloud Run on GitHub" />
             </div>
           </div>
         </div>
       </Section>
 
       {/* Publications Section */}
-      <Section title="Publications" icon={<HiSparkles className="text-[var(--primary)] mr-2" />} id="publications">
+      <Section title="Publications" icon={<HiSparkles className="text-[var(--primary)] mr-2" size={24} />} id="publications">
         <div className="space-y-10">
           <div className="card w-full">
-            <h3 className="text-xl mb-4 flex items-center gap-2"><FaBook className="text-[var(--primary)]" /> A Design of Crowd-Based Corruption Prevention System in Indonesia</h3>
+            <h3 className="text-xl mb-4 flex items-center gap-2"><FaBook className="text-[var(--primary)]" size={24} /> A Design of Crowd-Based Corruption Prevention System in Indonesia</h3>
             <p className="mb-4">Published in the 2019 International Conference on Information Management and Technology (ICIMTech). Developed a decision support system for corruption prevention using heuristic analysis and Google Map API.</p>
             <div className="mt-4">
-              <SocialLink href="https://ieeexplore.ieee.org/document/8843748" icon={<FaBook size={20} />} label="Read Publication" ariaLabel="Read A Design of Crowd-Based Corruption Prevention System in Indonesia" />
+              <SocialLink href="https://ieeexplore.ieee.org/document/8843748" icon={<FaBook size={18} />} label="Read Publication" ariaLabel="Read A Design of Crowd-Based Corruption Prevention System in Indonesia" />
             </div>
           </div>
           <div className="card w-full">
-            <h3 className="text-xl mb-4 flex items-center gap-2"><FaBook className="text-[var(--primary)]" /> Development of a Web Based Corruption Case Mapping Using Machine Learning</h3>
+            <h3 className="text-xl mb-4 flex items-center gap-2"><FaBook className="text-[var(--primary)]" size={24} /> Development of a Web Based Corruption Case Mapping Using Machine Learning</h3>
             <p className="mb-4">Published in the 2018 International Conference on Information Management and Technology (ICIMTech). Built a web application using Backpropagation ANN (96.91% accuracy) to map corruption cases in Indonesia.</p>
             <div className="mt-4">
-              <SocialLink href="https://ieeexplore.ieee.org/document/8528142" icon={<FaBook size={20} />} label="Read Publication" ariaLabel="Read Development of a Web Based Corruption Case Mapping Using Machine Learning" />
+              <SocialLink href="https://ieeexplore.ieee.org/document/8528142" icon={<FaBook size={18} />} label="Read Publication" ariaLabel="Read Development of a Web Based Corruption Case Mapping Using Machine Learning" />
             </div>
           </div>
         </div>
       </Section>
 
       {/* Awards Section */}
-      <Section title="Awards" icon={<FaTrophy className="text-[var(--primary)] mr-2" />} id="awards">
+      <Section title="Awards" icon={<FaTrophy className="text-[var(--primary)] mr-2" size={24} />} id="awards">
         <div className="space-y-10">
           <div className="card w-full">
             <h3 className="text-xl mb-4 flex items-center gap-2"><FaTrophy className="text-[var(--primary)]" /> Top Team at Ericsson Hackathon</h3>
@@ -277,19 +277,19 @@ export default function Home() {
       </Section>
 
       {/* Recent Articles Section */}
-      <Section title="Recent Articles" icon={<SiMedium className="text-[var(--primary)] mr-2" />} id="articles">
+      <Section title="Recent Articles" icon={<SiMedium className="text-[var(--primary)] mr-2" size={24} />} id="articles">
         <div className="space-y-10">
           <div className="card w-full text-center">
             <p className="mb-4">I share insights on AI, cloud engineering, and technology innovation on Medium. Check out my latest articles!</p>
             <div className="mt-4">
-              <SocialLink href="https://medium.com/@aashari" icon={<SiMedium size={24} />} label="Read on Medium" ariaLabel="Read Andi Ashari's articles on Medium" />
+              <SocialLink href="https://medium.com/@aashari" icon={<SiMedium size={18} />} label="Read on Medium" ariaLabel="Read Andi Ashari's articles on Medium" />
             </div>
           </div>
         </div>
       </Section>
 
       {/* Contact Section */}
-      <Section id="contact" title="Let&apos;s Connect" icon={<FaEnvelope className="inline-block mr-2" />}>
+      <Section id="contact" title="Let&apos;s Connect" icon={<FaEnvelope className="inline-block mr-2" size={24} />}>
         <p className="mb-6">
           I&apos;m always open to discussing new projects, opportunities, or collaborations. Based in Jakarta, Indonesia, I&apos;d love to hear from you—feel free to reach out!
         </p>
@@ -302,7 +302,7 @@ export default function Home() {
       </Section>
 
       {/* Footer */}
-      <footer className="container mx-auto px-4 mt-12 mb-8 border-t border-[var(--border)] text-center">
+      <footer className="container mx-auto border-t border-[var(--border)] text-center">
         <p className="text-sm text-[var(--muted)] max-w-prose mx-auto py-4">
           © {new Date().getFullYear()} Andi Ashari. All rights reserved. |{" "}
           <i>&quot;Innovation distinguishes between a leader and a follower.&quot; – Steve Jobs</i>

@@ -4,10 +4,12 @@
   /* Light theme (default) */
   --background: rgb(249, 248, 246); /* Soft cream/off-white background */
   --foreground: #333333; /* Dark gray text for contrast */
-  --primary: #555555;    /* Medium gray accent */
+  --primary: #4A4A4A;    /* Darker gray accent for better distinction */
   --muted: #6B7280;      /* Muted gray for secondary text */
-  --card: rgb(255, 255, 253); /* Slightly lighter than background, low contrast */
+  --card: rgb(252, 251, 250); /* Slightly more distinct card background */
   --border: #E5E3DF;     /* Light border color that matches the background tone */
+  --hover: #555555;      /* Slightly darker for hover states */
+  --shadow: rgba(0, 0, 0, 0.05); /* Consistent shadow color */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,10 +17,12 @@
     /* Dark theme */
     --background: #1A2A44; /* Dark grayish-blue */
     --foreground: #E5E5E5; /* Light gray text */
-    --primary: #9CA3AF;    /* Medium gray accent instead of blue */
+    --primary: #B0B7C3;    /* Lighter gray accent for better visibility */
     --muted: #9CA3AF;      /* Muted gray for secondary text */
-    --card: #1E2F4A;       /* Slightly lighter than background, low contrast */
+    --card: #21324F;       /* More distinct card background */
     --border: #2E4057;     /* Subtle border */
+    --hover: #C5CAD3;      /* Lighter color for hover states */
+    --shadow: rgba(0, 0, 0, 0.2); /* Darker shadow for dark theme */
   }
 }
 
@@ -52,13 +56,13 @@ body {
   border-radius: 8px;
   padding: 1.5rem;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth in light theme */
+  box-shadow: 0 2px 5px var(--shadow);
 }
 
 .card:hover {
   border-color: var(--primary);
   transform: scale(1.02);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+  box-shadow: 0 4px 8px var(--shadow);
 }
 
 @media (max-width: 768px) {
@@ -69,14 +73,15 @@ body {
 
 a {
   color: var(--primary);
-  text-decoration: underline; /* Make links more visible without relying on color */
-  text-underline-offset: 2px; /* Add space between text and underline */
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
   transition: all 0.2s ease;
 }
 
 a:hover {
-  color: var(--foreground);
-  text-decoration-thickness: 2px; /* Thicker underline on hover */
+  color: var(--hover);
+  text-decoration-thickness: 2px;
 }
 
 a:focus-visible {
@@ -86,8 +91,8 @@ a:focus-visible {
 }
 
 button, .button {
-  background: var(--primary);
-  color: var(--background); /* Use background color for text to ensure contrast */
+  background: linear-gradient(to bottom, var(--primary), color-mix(in srgb, var(--primary), #000000 10%));
+  color: var(--background);
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
@@ -95,17 +100,18 @@ button, .button {
   transition: all 0.2s ease;
   display: inline-block;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+  box-shadow: 0 2px 4px var(--shadow);
 }
 
 button:hover, .button:hover {
-  background-color: color-mix(in srgb, var(--primary), var(--foreground) 10%);
+  background: linear-gradient(to bottom, var(--hover), color-mix(in srgb, var(--hover), #000000 10%));
+  color: white;
   transform: translateY(-1px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px var(--shadow);
 }
 
 button:focus-visible, .button:focus-visible {
-  outline: 2px solid var(--primary);
+  outline: 2px solid var(--hover);
   outline-offset: 2px;
 }
 
@@ -121,14 +127,26 @@ button:focus-visible, .button:focus-visible {
   color: var(--foreground);
   text-decoration: none;
   transition: all 0.2s ease;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 3px var(--shadow);
+}
+
+/* Specific styling for buttons inside cards */
+.card .social-link {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+.card .social-link svg {
+  width: 18px;
+  height: 18px;
 }
 
 .social-link:hover,
 .tech-badge:hover {
   border-color: var(--primary);
   transform: scale(1.02);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--shadow);
+  color: var(--hover);
 }
 
 .social-link:focus-visible,
@@ -151,6 +169,11 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+h1 svg, h2 svg, h3 svg, h4 svg {
+  min-width: 24px;
+  min-height: 24px;
 }
 
 h1, h2 {
@@ -182,6 +205,12 @@ h4 { font-size: 1.25rem; }
   h2 { font-size: 1.75rem; }
   h3 { font-size: 1.25rem; }
   h4 { font-size: 1rem; }
+  
+  /* Ensure icons remain properly sized on mobile */
+  h1 svg, h2 svg, h3 svg, h4 svg {
+    min-width: 20px;
+    min-height: 20px;
+  }
 }
 
 ul {
