@@ -3,21 +3,21 @@
 :root {
   /* Light theme (default) */
   --background: rgb(229, 229, 229); /* Light gray background */
-  --foreground: #1A2A44; /* Dark text for contrast */
-  --primary: #4A90E2;   /* Keeping the same soft blue accent */
-  --muted: #6B7280;     /* Muted gray for secondary text */
-  --card: #FFFFFF;      /* White card background for contrast */
-  --border: #D1D5DB;    /* Light border color */
+  --foreground: #333333; /* Dark gray text for contrast */
+  --primary: #555555;    /* Medium gray accent instead of blue */
+  --muted: #6B7280;      /* Muted gray for secondary text */
+  --card: rgb(240, 240, 240); /* Slightly lighter gray for cards, low contrast */
+  --border: #D1D5DB;     /* Light border color */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     /* Dark theme */
     --background: #1A2A44; /* Dark grayish-blue */
-    --foreground: #FFFFFF; /* White text */
-    --primary: #4A90E2;    /* Same accent color */
-    --muted: #A3BFFA;      /* Light muted color */
-    --card: #1A2A44;       /* Matches background */
+    --foreground: #E5E5E5; /* Light gray text */
+    --primary: #9CA3AF;    /* Medium gray accent instead of blue */
+    --muted: #9CA3AF;      /* Muted gray for secondary text */
+    --card: #1E2F4A;       /* Slightly lighter than background, low contrast */
     --border: #2E4057;     /* Subtle border */
   }
 }
@@ -69,12 +69,14 @@ body {
 
 a {
   color: var(--primary);
-  text-decoration: none;
-  transition: color 0.2s ease;
+  text-decoration: underline; /* Make links more visible without relying on color */
+  text-underline-offset: 2px; /* Add space between text and underline */
+  transition: all 0.2s ease;
 }
 
 a:hover {
-  color: color-mix(in srgb, var(--primary), #FFFFFF 20%);
+  color: var(--foreground);
+  text-decoration-thickness: 2px; /* Thicker underline on hover */
 }
 
 a:focus-visible {
@@ -85,7 +87,7 @@ a:focus-visible {
 
 button, .button {
   background: var(--primary);
-  color: #FFFFFF;
+  color: var(--background); /* Use background color for text to ensure contrast */
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
@@ -93,11 +95,11 @@ button, .button {
   transition: all 0.2s ease;
   display: inline-block;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
 }
 
 button:hover, .button:hover {
-  background-color: color-mix(in srgb, var(--primary), #FFFFFF 10%);
+  background-color: color-mix(in srgb, var(--primary), var(--foreground) 10%);
   transform: translateY(-1px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
