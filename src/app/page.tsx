@@ -2,30 +2,17 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope, FaTerminal, FaBrain, FaAws, FaGoogle, FaFilm, FaBook, FaTrophy, FaArrowUp, FaGraduationCap } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope, FaTerminal, FaBrain, FaAws, FaGoogle, FaFilm, FaBook, FaTrophy, FaGraduationCap } from "react-icons/fa";
 import { SiMedium, SiTerraform, SiTypescript, SiGo, SiPython } from "react-icons/si";
 import { HiSparkles } from "react-icons/hi";
 import Script from "next/script";
 import Section from "./components/Section";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 export default function Home() {
-  // State for Back to Top button
-  const [showBackToTop, setShowBackToTop] = useState(false);
-
   // Effect to handle scroll events
   useEffect(() => {
-    const handleScroll = () => {
-      // Back to Top button visibility
-      if (window.scrollY > 300) {
-        setShowBackToTop(true);
-      } else {
-        setShowBackToTop(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    // Any other scroll-related functionality can go here
   }, []);
 
   // JSON-LD structured data for Person schema
@@ -313,15 +300,6 @@ export default function Home() {
           <SocialLink href="mailto:a.ashari1302@gmail.com" icon={<FaEnvelope size={24} />} label="Email" ariaLabel="Send an email to Andi Ashari" />
         </div>
       </Section>
-
-      {/* Back to Top Button */}
-      <button
-        className={`back-to-top ${!showBackToTop ? 'invisible' : ''}`}
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        aria-label="Back to top"
-      >
-        <FaArrowUp />
-      </button>
 
       {/* Footer */}
       <footer className="container mx-auto px-4 mt-12 mb-8 border-t border-[var(--border)] text-center">

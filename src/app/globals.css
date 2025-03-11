@@ -1,22 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --background: #1A2A44; /* Dark grayish-blue from grok.com-inspired design */
-  --foreground: #FFFFFF; /* White text for contrast */
-  --primary: #4A90E2;   /* Soft blue accent */
-  --muted: #A3BFFA;     /* Light muted color for secondary text */
-  --card: #1A2A44;      /* Matches background for flat design */
-  --border: #2E4057;    /* Subtle border color */
+  /* Light theme (default) */
+  --background: rgb(229, 229, 229); /* Light gray background */
+  --foreground: #1A2A44; /* Dark text for contrast */
+  --primary: #4A90E2;   /* Keeping the same soft blue accent */
+  --muted: #6B7280;     /* Muted gray for secondary text */
+  --card: #FFFFFF;      /* White card background for contrast */
+  --border: #D1D5DB;    /* Light border color */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #1A2A44;
-    --foreground: #FFFFFF;
-    --primary: #4A90E2;
-    --muted: #A3BFFA;
-    --card: #1A2A44;
-    --border: #2E4057;
+    /* Dark theme */
+    --background: #1A2A44; /* Dark grayish-blue */
+    --foreground: #FFFFFF; /* White text */
+    --primary: #4A90E2;    /* Same accent color */
+    --muted: #A3BFFA;      /* Light muted color */
+    --card: #1A2A44;       /* Matches background */
+    --border: #2E4057;     /* Subtle border */
   }
 }
 
@@ -45,16 +47,18 @@ body {
 }
 
 .card {
-  background: transparent;
+  background: var(--card);
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 1.5rem;
   transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth in light theme */
 }
 
 .card:hover {
   border-color: var(--primary);
   transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
 }
 
 @media (max-width: 768px) {
@@ -86,17 +90,20 @@ button, .button {
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
   display: inline-block;
   text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 button:hover, .button:hover {
   background-color: color-mix(in srgb, var(--primary), #FFFFFF 10%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 button:focus-visible, .button:focus-visible {
-  outline: 2px solid #FFFFFF;
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 
@@ -108,16 +115,18 @@ button:focus-visible, .button:focus-visible {
   padding: 0.5rem 1rem;
   border: 1px solid var(--border);
   border-radius: 4px;
-  background: transparent;
+  background: var(--card);
   color: var(--foreground);
   text-decoration: none;
   transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .social-link:hover,
 .tech-badge:hover {
   border-color: var(--primary);
   transform: scale(1.02);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .social-link:focus-visible,
@@ -216,60 +225,20 @@ html {
 }
 
 footer {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
   padding: 2rem 0;
   transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
   footer {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
     padding: 1.5rem 0;
   }
 }
 
-.back-to-top {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  padding: 0.75rem;
-  border-radius: 50%;
-  background-color: var(--primary);
-  color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-  z-index: 40;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  visibility: visible;
-  opacity: 1;
-}
-
-.back-to-top:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
-}
-
-.back-to-top:focus-visible {
-  outline: 2px solid white;
-  outline-offset: 2px;
-}
-
-.back-to-top.invisible {
-  visibility: hidden;
-  opacity: 0;
-}
-
-/* Remove the section:first-of-type special padding */
 .section:first-of-type {
-  padding-top: 3rem;
-}
-
-@media (max-width: 768px) {
-  .section:first-of-type {
-    padding-top: 2rem;
-  }
+  padding-top: 0;
 }
