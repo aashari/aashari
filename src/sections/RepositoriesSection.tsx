@@ -293,10 +293,10 @@ export default function RepositoriesSection() {
         From cloud infrastructure and AI tools to boilerplates and research implementations.
       </p>
       
+      <div className="space-y-6 grid grid-cols-1">
       <RepositorySection 
         title="AI & Automation" 
         icon={<FaRobot className="icon-primary" />}
-        isFirstSection={true}
       >
         {repositories.aiAndAutomation.map((repo, index) => (
           <Repository key={index} {...repo} />
@@ -347,6 +347,7 @@ export default function RepositoriesSection() {
           <Repository key={index} {...repo} />
         ))}
       </RepositorySection>
+      </div>
     </Section>
   );
 } 
