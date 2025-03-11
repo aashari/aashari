@@ -52,14 +52,6 @@ Here’s what I’ve been crafting lately:
 
 ---
 
-### 📈 GitHub Snapshot
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=aashari&show_icons=true&theme=tokyonight" alt="GitHub Stats" width="420"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=aashari&layout=compact&theme=tokyonight" alt="Top Languages" width="300"/>
-</div>
-
----
-
 ### 🎉 Life Beyond Code
 - **Sci-Fi Fix**: *Interstellar*—space exploration meets human emotion.  
 - **Coffee Ritual**: Fueling innovation, one cup at a time.  
@@ -71,6 +63,8 @@ Here’s what I’ve been crafting lately:
 Passionate about AI, cloud, or just want to chat tech over coffee? Reach out!  
 - **Read my thoughts**: [Medium](https://medium.com/@aashari)  
 - **Explore my work**: [GitHub](https://github.com/aashari)  
+
+---
 
 <div align="center">
   <i>“Innovation distinguishes between a leader and a follower.” – Steve Jobs</i>
