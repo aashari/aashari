@@ -8,7 +8,7 @@ import SocialLink from "../components/SocialLink";
 export default function PublicationsSection() {
   return (
     <Section title="Publications" icon={<HiSparkles className="icon-primary mr-2" size={24} />} id="publications">
-      <div className="space-y-10">
+      <div className="space-y-6 grid grid-cols-1">
         <div className="card w-full">
           <h3 className="text-xl mb-4 flex items-center gap-2"><FaBook className="icon-primary" size={24} /> A Design of Crowd-Based Corruption Prevention System in Indonesia</h3>
           <p className="mb-4">2019 International Conference on Information Management and Technology (ICIMTech) · Aug 1, 2019</p>

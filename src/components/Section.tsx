@@ -11,7 +11,7 @@ export default function Section({ title, icon, children, id }: SectionProps) {
   return (
     <section className="section" id={id}>
       <div className="container mx-auto">
-        <h2 className="text-2xl font-bold text-center mb-10 flex justify-center items-center gap-2">
+        <h2 className="text-2xl font-bold text-center mb-6 flex justify-center items-center gap-2">
           {icon}
           {title}
         </h2>

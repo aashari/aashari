@@ -21,7 +21,7 @@ export default function HeroSection() {
         <p className="text-lg text-muted mb-4">
           Tech Wanderer | AI Operations & Engineering | Cloud Innovator
         </p>
-        <p className="text-md mb-10 max-w-prose mx-auto">
+        <p className="text-md mb-6 max-w-prose mx-auto">
           Based in Indonesia, I&apos;m a Tech Wanderer and AI operations expert, specializing in cloud engineering and scalable AI solutions.
         </p>
         <div className="flex flex-wrap justify-center gap-4 md:gap-5 mt-10">

@@ -9,7 +9,7 @@ import TechBadge from "../components/TechBadge";
 export default function AboutSection() {
   return (
     <Section title="Who I Am" icon={<HiSparkles className="icon-primary mr-2" size={24} />} id="about">
-      <div className="space-y-10">
+      <div className="space-y-6 grid grid-cols-1">
         <div className="card w-full">
           <h3 className="text-xl mb-4">Professional Focus</h3>
           <ul className="space-y-2">
