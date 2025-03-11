@@ -70,16 +70,6 @@ Here are some of my favorite creations:
 
 ---
 
-## Awards & Recognition
-
-- **Top Team at Ericsson Hackathon**  
-  Developed an enterprise system for fleet tracking using IoT and Machine Learning.  
-
-- **Runner-up at Kurio Hackathon**  
-  Created a machine learning-based news recommendation system using the Pearson Correlation algorithm.  
-
----
-
 ## Beyond Code
 
 - **Sci-Fi Inspiration**: *Interstellar*—its blend of space exploration and human emotion fuels my innovative thinking.
