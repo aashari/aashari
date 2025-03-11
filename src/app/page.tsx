@@ -133,7 +133,7 @@ export default function Home() {
       />
 
       {/* Hero Section */}
-      <section className="section mt-24" id="hero">
+      <section className="section mt-16" id="hero">
         <div className="container text-center mx-auto">
           <Image 
             src="/profile.jpeg" 
