@@ -1,61 +1,72 @@
-### Hi there 👋, I'm Andi Ashari!
-
-I'm a **Cloud Infrastructure Engineer** based in Indonesia, passionate about building scalable systems and automating workflows. When I'm not tinkering with code or cloud configs, you can find me enjoying sci-fi movies or sipping on a strong cup of coffee.
-
-#### Connect with Me
-[![LinkedIn Badge](https://img.shields.io/badge/-Andi%20Ashari-0A66C2?style=flat-square&logo=LinkedIn&logoColor=white)](https://www.linkedin.com/in/aashari/)  
-[![Instagram Badge](https://img.shields.io/badge/-@ant.dhe-E4405F?style=flat-square&logo=Instagram&logoColor=white)](https://www.instagram.com/ant.dhe/)  
-[![Gmail Badge](https://img.shields.io/badge/-a.ashari1302@gmail.com-D14836?style=flat-square&logo=Gmail&logoColor=white)](mailto:a.ashari1302@gmail.com)
-
----
-
-### About Me
-
-- ⚙️ **Tech Stack**: I work daily with `.tf` (Terraform), `.js` (JavaScript/TypeScript), `.go` (Golang), `.python`, `.sh` (Bash), and occasionally `.php`.
-- 🌩️ **Expertise**: Cloud infrastructure, DevOps, automation, and software development.
-- 💡 **Interests**: Sci-fi tech, distributed systems, and AI-driven tools.
-- 💬 **Ask Me About**: Cloud architecture, CI/CD pipelines, or how to brew the perfect coffee!
+<div align="center">
+  <h1>👋 Hey, I’m Andi Ashari!</h1>
+  <p>AI Operations and Engineering | Cloud Enthusiast | Sci-Fi Lover</p>
+  <p>Based in Indonesia, I blend AI, infrastructure, and a good cup of coffee to build awesome things.</p>
+  
+  <a href="https://www.linkedin.com/in/aashari/">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+  <a href="https://www.instagram.com/ant.dhe/">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/>
+  </a>
+  <a href="mailto:a.ashari1302@gmail.com">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+  </a>
+</div>
 
 ---
 
-### Featured Projects
+### 🚀 About Me
+- **Role**: AI Operations and Engineering  
+- **Tech I Love**: Terraform (`.tf`), TypeScript/JavaScript (`.js`), Golang (`.go`), Python (`.py`), Bash (`.sh`)  
+- **Focus**: Cloud infrastructure, AI automation, and scalable systems  
+- **Hobbies**: Watching sci-fi movies (*Interstellar* is my jam!) and drinking way too much ☕  
 
-Here are some of my active and noteworthy repositories:
+---
 
-#### Cloud & Infrastructure
+### 🛠️ What I’m Building
+Here’s a peek at my latest projects:
+
+#### 🌐 Cloud & Infrastructure
 - **[terraform-gcp-cloud-run](https://github.com/aashari/terraform-gcp-cloud-run)**  
-  A comprehensive Terraform module for deploying Google Cloud Run services with advanced configuration options like scaling, VPC, and health checks.
+  Terraform module for Google Cloud Run with scaling, VPC, and health checks.  
 - **[rag-aws-ssm](https://github.com/aashari/rag-aws-ssm)**  
-  A CLI tool for executing shell commands and transferring files to AWS EC2 instances via SSM. AI-compatible with rich output formatting.
+  CLI tool for AWS SSM command execution and file transfers—AI-ready!  
 
-#### AI & Automation
+#### 🤖 AI & Automation
 - **[rag-browser](https://github.com/aashari/rag-browser)**  
-  A browser automation tool built with Playwright, optimized for Bun, and supporting both CLI and MCP server modes for AI integration.
+  Browser automation with Playwright and Bun, built for humans and AI alike.  
 - **[nodejs-geocoding](https://github.com/aashari/nodejs-geocoding)**  
-  A lightweight TypeScript library for geocoding and reverse geocoding, featuring zero dependencies and multilingual support.
+  Lightweight geocoding library in TypeScript with zero dependencies.  
 
-#### Boilerplates
+#### 📦 Boilerplates
 - **[boilerplate-rest-api-bun](https://github.com/aashari/boilerplate-rest-api-bun)**  
-  A beginner-friendly REST API boilerplate using Bun, Elysia, and Mongoose with Dockerized MongoDB.
+  REST API starter with Bun, Elysia, and MongoDB.  
 - **[boilerplate-kubernetes](https://github.com/aashari/boilerplate-kubernetes)**  
-  A GKE deployment boilerplate using Terraform and GitHub Actions, featuring Go and Node.js examples.
+  GKE deployment with Terraform and GitHub Actions.  
 - **[boilerplate-lambda-typescript](https://github.com/aashari/boilerplate-lambda-typescript)**  
-  A TypeScript AWS Lambda boilerplate with Terraform provisioning, DynamoDB integration, and Datadog metrics.
+  TypeScript AWS Lambda with Terraform and Datadog integration.  
 
 ---
 
-### Stats & Activity
-![Andi's GitHub Stats](https://github-readme-stats.vercel.app/api?username=aashari&show_icons=true&theme=radical)  
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=aashari&layout=compact&theme=radical)
+### 📊 My GitHub Vibes
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=aashari&show_icons=true&theme=dracula" alt="GitHub Stats" width="420"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=aashari&layout=compact&theme=dracula" alt="Top Languages" width="300"/>
+</div>
 
 ---
 
-### Fun Facts
-- 🚀 **Favorite Sci-Fi Movie**: *Interstellar* – I love the blend of tech and human emotion.
-- ☕ **Coffee Count**: Probably too many cups to track daily!
-- 🎯 **Current Goal**: Exploring AI-driven infrastructure automation.
+### 🌟 Fun Bits
+- **Sci-Fi Obsession**: *Interstellar*—space, tech, and emotions, oh my!  
+- **Coffee Fuel**: I’ve lost count of my daily cups.  
+- **Next Adventure**: Diving deeper into AI-powered infrastructure.  
 
 ---
 
-### Let’s Collaborate!
-Got an idea or project in mind? Feel free to reach out—I’m always up for a chat about cloud, code, or coffee. Check out my repositories and let’s build something awesome together!
+### 💬 Let’s Connect!
+Got a wild idea about AI, cloud, or coffee? Hit me up! Explore my repos and let’s create something epic together.
+
+<div align="center">
+  <i>“The only way to do great work is to love what you do.” – Steve Jobs</i>
+</div>
