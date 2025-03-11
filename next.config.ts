@@ -16,46 +16,9 @@ const nextConfig: NextConfig = {
     ],
     unoptimized: true, // Required for static exports
   },
-  // Add HTTP response headers for security and caching
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self';",
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin',
-          },
-        ],
-      },
-      {
-        // Cache static assets for better performance
-        source: '/(.*).(jpg|jpeg|png|svg|webp|avif|ico|css|js)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-    ];
-  },
+  // Note: Headers are not applied in static exports, but kept here for reference
+  // and for use in development mode. For production, these headers should be
+  // configured in your hosting platform (Cloudflare Pages).
 };
 
 export default nextConfig;
