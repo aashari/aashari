@@ -324,8 +324,8 @@ export default function Home() {
       </button>
 
       {/* Footer */}
-      <footer className="container mx-auto px-4 py-8 mt-12 border-t border-[var(--border)] text-center">
-        <p className="text-sm text-[var(--muted)] max-w-prose mx-auto">
+      <footer className="container mx-auto px-4 mt-12 border-t border-[var(--border)] text-center">
+        <p className="text-sm text-[var(--muted)] max-w-prose mx-auto py-4">
           © {new Date().getFullYear()} Andi Ashari. All rights reserved. |{" "}
           <i>&quot;Innovation distinguishes between a leader and a follower.&quot; – Steve Jobs</i>
         </p>
