@@ -127,15 +127,15 @@ export default function Home() {
             alt="Profile photo of Andi Ashari, AI Operations Expert" 
             width={150} 
             height={150} 
-            className="rounded-full mx-auto mb-8 shadow-lg shadow-[rgba(74,144,226,0.3)]" 
+            className="profile-image mx-auto mb-8 shadow-lg shadow-[rgba(74,144,226,0.3)]" 
             priority 
           />
-          <h1 className="text-4xl font-bold text-[var(--primary)] mb-6 justify-center">Andi Ashari</h1>
-          <p className="text-lg text-[var(--muted)] mb-4">
+          <h1 className="text-4xl font-bold text-primary mb-6 justify-center">Andi Ashari</h1>
+          <p className="text-lg text-muted mb-4">
             Tech Wanderer | AI Operations & Engineering | Cloud Innovator
           </p>
           <p className="text-md mb-10 max-w-prose mx-auto">
-            Based in Indonesia, I&apos;m a Tech Wanderer and AI operations expert, specializing in cloud engineering and scalable AI solutions. Explore my work in cloud infrastructure and sci-fi-inspired innovation, or <Link href="#contact" className="text-[var(--primary)] underline">connect with me</Link> to discuss opportunities.
+            Based in Indonesia, I&apos;m a Tech Wanderer and AI operations expert, specializing in cloud engineering and scalable AI solutions. Explore my work in cloud infrastructure and sci-fi-inspired innovation, or <Link href="#contact" className="text-primary underline">connect with me</Link> to discuss opportunities.
           </p>
           <div className="mb-10">
             <Link href="#projects" className="button">
@@ -154,7 +154,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <Section title="Who I Am" icon={<HiSparkles className="text-[var(--primary)] mr-2" size={24} />} id="about">
+      <Section title="Who I Am" icon={<HiSparkles className="icon-primary mr-2" size={24} />} id="about">
         <div className="space-y-10">
           <div className="card w-full">
             <h3 className="text-xl mb-4">Professional Focus</h3>
@@ -165,7 +165,7 @@ export default function Home() {
             </ul>
           </div>
           <div className="card w-full">
-            <h3 className="text-xl mb-4 flex items-center gap-2"><FaFilm className="text-[var(--primary)]" /> Fun Facts</h3>
+            <h3 className="text-xl mb-4 flex items-center gap-2"><FaFilm className="icon-primary" /> Fun Facts</h3>
             <ul className="space-y-2">
               <li>Sci-Fi Obsession: I draw inspiration from sci-fi universes like Interstellar—its blend of space, tech, and human emotion fuels my innovative thinking in tech.</li>
               <li>Coffee Fuel: I&apos;ve lost count of my daily cups, but coffee keeps me coding!</li>
@@ -185,11 +185,11 @@ export default function Home() {
       </Section>
 
       {/* Projects Section */}
-      <Section title="My Projects" icon={<HiSparkles className="text-[var(--primary)] mr-2" size={24} />} id="projects">
+      <Section title="My Projects" icon={<HiSparkles className="icon-primary mr-2" size={24} />} id="projects">
         <div className="space-y-10">
           <div className="card w-full">
             <h3 className="text-xl mb-4 flex items-center gap-2">
-              <FaBrain className="text-[var(--primary)]" /> 
+              <FaBrain className="icon-primary" /> 
               Brainy Buddy
             </h3>
             <p className="mb-4">An AI chatbot built with NodeJS, MongoDB, GCP, Terraform, and OpenAI API, serving over 35,000 users on LINE and Telegram with 1,400-1,500 daily active users.</p>
@@ -204,7 +204,7 @@ export default function Home() {
             </div>
           </div>
           <div className="card w-full">
-            <h3 className="text-xl mb-4 flex items-center gap-2"><FaAws className="text-[var(--primary)]" /> Boilerplate Lambda TypeScript</h3>
+            <h3 className="text-xl mb-4 flex items-center gap-2"><FaAws className="icon-primary" /> Boilerplate Lambda TypeScript</h3>
             <p className="mb-4">A template for AWS Lambda projects using TypeScript, featuring AWS Secrets, DynamoDB, and Datadog metrics for serverless applications.</p>
             <ul className="space-y-2">
               <li>Terraform for infrastructure management</li>
@@ -216,7 +216,7 @@ export default function Home() {
             </div>
           </div>
           <div className="card w-full">
-            <h3 className="text-xl mb-4 flex items-center gap-2"><FaAws className="text-[var(--primary)]" /> AWS Static Website Terraform Module</h3>
+            <h3 className="text-xl mb-4 flex items-center gap-2"><FaAws className="icon-primary" /> AWS Static Website Terraform Module</h3>
             <p className="mb-4">A Terraform module for deploying static websites on AWS S3 and CloudFront, with custom domain support and CloudFront functions.</p>
             <ul className="space-y-2">
               <li>Supports Cloudflare and Route53 for custom domains</li>
@@ -228,7 +228,7 @@ export default function Home() {
             </div>
           </div>
           <div className="card w-full">
-            <h3 className="text-xl mb-4 flex items-center gap-2"><FaGoogle className="text-[var(--primary)]" /> Terraform GCP Cloud Run</h3>
+            <h3 className="text-xl mb-4 flex items-center gap-2"><FaGoogle className="icon-primary" /> Terraform GCP Cloud Run</h3>
             <p className="mb-4">A Terraform module for deploying containerized applications on Google Cloud Run, automating resource setup and configurations.</p>
             <ul className="space-y-2">
               <li>Automates Google Container Images and Service Accounts</li>
@@ -243,17 +243,17 @@ export default function Home() {
       </Section>
 
       {/* Publications Section */}
-      <Section title="Publications" icon={<HiSparkles className="text-[var(--primary)] mr-2" size={24} />} id="publications">
+      <Section title="Publications" icon={<HiSparkles className="icon-primary mr-2" size={24} />} id="publications">
         <div className="space-y-10">
           <div className="card w-full">
-            <h3 className="text-xl mb-4 flex items-center gap-2"><FaBook className="text-[var(--primary)]" size={24} /> A Design of Crowd-Based Corruption Prevention System in Indonesia</h3>
+            <h3 className="text-xl mb-4 flex items-center gap-2"><FaBook className="icon-primary" size={24} /> A Design of Crowd-Based Corruption Prevention System in Indonesia</h3>
             <p className="mb-4">Published in the 2019 International Conference on Information Management and Technology (ICIMTech). Developed a decision support system for corruption prevention using heuristic analysis and Google Map API.</p>
             <div className="mt-4">
               <SocialLink href="https://ieeexplore.ieee.org/document/8843748" icon={<FaBook size={18} />} label="Read Publication" ariaLabel="Read A Design of Crowd-Based Corruption Prevention System in Indonesia" />
             </div>
           </div>
           <div className="card w-full">
-            <h3 className="text-xl mb-4 flex items-center gap-2"><FaBook className="text-[var(--primary)]" size={24} /> Development of a Web Based Corruption Case Mapping Using Machine Learning</h3>
+            <h3 className="text-xl mb-4 flex items-center gap-2"><FaBook className="icon-primary" size={24} /> Development of a Web Based Corruption Case Mapping Using Machine Learning</h3>
             <p className="mb-4">Published in the 2018 International Conference on Information Management and Technology (ICIMTech). Built a web application using Backpropagation ANN (96.91% accuracy) to map corruption cases in Indonesia.</p>
             <div className="mt-4">
               <SocialLink href="https://ieeexplore.ieee.org/document/8528142" icon={<FaBook size={18} />} label="Read Publication" ariaLabel="Read Development of a Web Based Corruption Case Mapping Using Machine Learning" />
@@ -263,21 +263,21 @@ export default function Home() {
       </Section>
 
       {/* Awards Section */}
-      <Section title="Awards" icon={<FaTrophy className="text-[var(--primary)] mr-2" size={24} />} id="awards">
+      <Section title="Awards" icon={<FaTrophy className="icon-primary mr-2" size={24} />} id="awards">
         <div className="space-y-10">
           <div className="card w-full">
-            <h3 className="text-xl mb-4 flex items-center gap-2"><FaTrophy className="text-[var(--primary)]" /> Top Team at Ericsson Hackathon</h3>
+            <h3 className="text-xl mb-4 flex items-center gap-2"><FaTrophy className="icon-primary" /> Top Team at Ericsson Hackathon</h3>
             <p className="mb-4">Recognized for developing an innovative solution that addressed real-world challenges in telecommunications and connectivity.</p>
           </div>
           <div className="card w-full">
-            <h3 className="text-xl mb-4 flex items-center gap-2"><FaTrophy className="text-[var(--primary)]" /> Runner-up at Kurio Hackathon</h3>
+            <h3 className="text-xl mb-4 flex items-center gap-2"><FaTrophy className="icon-primary" /> Runner-up at Kurio Hackathon</h3>
             <p className="mb-4">Awarded for creating a cutting-edge news aggregation and personalization system using machine learning algorithms.</p>
           </div>
         </div>
       </Section>
 
       {/* Recent Articles Section */}
-      <Section title="Recent Articles" icon={<SiMedium className="text-[var(--primary)] mr-2" size={24} />} id="articles">
+      <Section title="Recent Articles" icon={<SiMedium className="icon-primary mr-2" size={24} />} id="articles">
         <div className="space-y-10">
           <div className="card w-full text-center">
             <p className="mb-4">I share insights on AI, cloud engineering, and technology innovation on Medium. Check out my latest articles!</p>
@@ -289,7 +289,7 @@ export default function Home() {
       </Section>
 
       {/* Contact Section */}
-      <Section id="contact" title="Let&apos;s Connect" icon={<FaEnvelope className="inline-block mr-2" size={24} />}>
+      <Section id="contact" title="Let&apos;s Connect" icon={<FaEnvelope className="icon-primary mr-2" size={24} />}>
         <p className="mb-6">
           I&apos;m always open to discussing new projects, opportunities, or collaborations. Based in Jakarta, Indonesia, I&apos;d love to hear from you—feel free to reach out!
         </p>
@@ -302,9 +302,10 @@ export default function Home() {
       </Section>
 
       {/* Footer */}
-      <footer className="container mx-auto border-t border-[var(--border)] text-center">
-        <p className="text-sm text-[var(--muted)] max-w-prose mx-auto py-4">
-          © {new Date().getFullYear()} Andi Ashari. All rights reserved. |{" "}
+      <footer className="container mx-auto text-center">
+        <p className="text-sm text-muted max-w-prose mx-auto py-xl">
+          © {new Date().getFullYear()} Andi Ashari. All rights reserved.
+          <br className="my-2" />
           <i>&quot;Innovation distinguishes between a leader and a follower.&quot; – Steve Jobs</i>
         </p>
       </footer>
