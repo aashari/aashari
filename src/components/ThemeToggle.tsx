@@ -6,12 +6,16 @@ import { FaSun, FaMoon } from 'react-icons/fa';
 interface ThemeToggleProps {
   size?: 'sm' | 'md' | 'lg';
   position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left' | 'custom';
+  shape?: 'circle' | 'square';
+  corner?: 'sm' | 'md' | 'lg'; // For controlling square corners
   className?: string;
 }
 
 export default function ThemeToggle({ 
   size = 'md', 
   position = 'top-right', 
+  shape = 'circle',
+  corner = 'md',
   className = '' 
 }: ThemeToggleProps) {
   const [theme, setTheme] = useState<'light' | 'dark' | 'system'>('system');
@@ -118,7 +122,11 @@ export default function ThemeToggle({
     lg: 'w-12 h-12',
   };
   
-  // Position classes
+  // Position classes with fallback to top-right if invalid
+  const validPosition = ['top-right', 'top-left', 'bottom-right', 'bottom-left', 'custom'].includes(position) 
+    ? position 
+    : 'top-right';
+  
   const positionClasses = {
     'top-right': 'top-4 right-4',
     'top-left': 'top-4 left-4',
@@ -127,6 +135,9 @@ export default function ThemeToggle({
     'custom': '',
   };
   
+  // Shape and corner classes
+  const shapeCornerClass = shape === 'circle' ? 'shape-circle' : `shape-square rounded-${corner}`;
+  
   // Icon color based on theme - using CSS variables for color
   const iconColor = !showDarkIcon ? 'var(--background)' : 'var(--foreground)';
   
@@ -134,7 +145,7 @@ export default function ThemeToggle({
   if (!mounted) {
     return (
       <div 
-        className={`theme-toggle-placeholder ${sizeClasses[size]} ${positionClasses[position]} ${className}`} 
+        className={`theme-toggle-placeholder ${sizeClasses[size]} ${positionClasses[validPosition]} ${shapeCornerClass} ${className}`}
         aria-hidden="true" 
       />
     );
@@ -143,10 +154,9 @@ export default function ThemeToggle({
   return (
     <button 
       onClick={toggleTheme}
-      className={`theme-toggle interactive-toggle ${sizeClasses[size]} ${positionClasses[position]} ${className}`}
+      className={`theme-toggle interactive-toggle ${sizeClasses[size]} ${positionClasses[validPosition]} ${shapeCornerClass} ${className}`}
       aria-label={`Switch to ${theme === 'light' ? 'dark' : theme === 'dark' ? 'system' : 'light'} theme`}
       title={`Current theme: ${theme === 'system' ? `System (${systemPreference})` : theme}`}
-      style={{ color: iconColor }}
     >
       <div className={`theme-toggle-icon ${isRotating ? 'rotating' : ''}`}>
         {showDarkIcon ? (

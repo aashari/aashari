@@ -15,6 +15,12 @@
   box-shadow: var(--shadow-sm);
 }
 
+/* New rounded variants */
+.rounded-none { border-radius: 0; }
+.rounded-sm { border-radius: var(--radius-sm); }
+.rounded-md { border-radius: var(--radius-md); }
+.rounded-lg { border-radius: var(--radius-lg); }
+
 /* These specific styles can now be controlled via props */
 /* Keeping them as fallbacks for backward compatibility */
 .card .social-link:not([class*="py-"]):not([class*="px-"]) {

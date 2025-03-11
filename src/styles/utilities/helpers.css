@@ -186,4 +186,7 @@
   .md\:gap-5 { gap: 1.25rem; }
 }
 
+/* Grid utilities */
+.col-span-full { grid-column: 1 / -1; }
+
 

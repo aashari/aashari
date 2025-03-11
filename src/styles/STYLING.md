@@ -150,6 +150,7 @@ This document outlines the styling conventions used in this project to ensure co
   ariaLabel="Visit GitHub"
   size="lg" // 'sm' | 'md' | 'lg'
   variant="outline" // 'default' | 'outline' | 'minimal'
+  rounded="lg" // 'none' | 'sm' | 'md' | 'lg'
   className="my-custom-class" // Additional CSS classes
 />
 ```
@@ -170,6 +171,7 @@ This document outlines the styling conventions used in this project to ensure co
   ariaLabel="React"
   size="sm" // 'sm' | 'md' | 'lg'
   color="primary" // 'default' | 'primary' | 'muted'
+  rounded="md" // 'none' | 'sm' | 'md' | 'lg'
   className="my-custom-class" // Additional CSS classes
 />
 ```
@@ -189,6 +191,7 @@ This document outlines the styling conventions used in this project to ensure co
   columns={2} // 1 | 2 | 3 | 4 (when layout="grid")
   align="left" // 'left' | 'center' | 'right'
   spacing="lg" // 'sm' | 'md' | 'lg'
+  background="muted" // 'default' | 'primary' | 'muted'
   className="my-custom-class" // Additional CSS classes
 >
   <p>Content 1</p>
@@ -205,6 +208,8 @@ This document outlines the styling conventions used in this project to ensure co
 <ThemeToggle 
   size="lg" // 'sm' | 'md' | 'lg'
   position="bottom-right" // 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left' | 'custom'
+  shape="square" // 'circle' | 'square'
+  corner="lg" // 'sm' | 'md' | 'lg' (only applies when shape="square")
   className="my-custom-class" // Additional CSS classes when position="custom"
 />
 ```
@@ -227,6 +232,7 @@ This document outlines the styling conventions used in this project to ensure co
   language="typescript"
   variant="compact" // 'default' | 'compact' | 'detailed'
   size="lg" // 'sm' | 'md' | 'lg'
+  rounded="lg" // 'none' | 'sm' | 'md' | 'lg'
   className="my-custom-class" // Additional CSS classes
 />
 ```

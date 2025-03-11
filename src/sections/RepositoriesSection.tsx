@@ -287,7 +287,12 @@ export default function RepositoriesSection() {
   };
 
   return (
-    <Section title="GitHub Repositories" icon={<FaGithub className="icon-primary mr-2" size={24} />} id="repositories">
+    <Section 
+      title="GitHub Repositories" 
+      icon={<FaGithub className="icon-primary mr-2" size={24} />} 
+      id="repositories"
+      titleSize="lg"
+    >
       <p className="mb-8">
         Explore my open-source projects and contributions across various technologies and domains. 
         From cloud infrastructure and AI tools to boilerplates and research implementations.

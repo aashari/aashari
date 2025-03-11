@@ -12,7 +12,7 @@
   /* Width and height now controlled by props */
   width: var(--button-size-lg);
   height: var(--button-size-lg);
-  border-radius: 50%;
+  border-radius: 50%; /* Default circle shape - will be overridden by shape classes */
   background-color: var(--card);
   border: 1px solid var(--border);
   padding: 0;
@@ -22,6 +22,15 @@
   transition: all 0.2s ease;
   box-shadow: var(--shadow-sm);
 }
+
+/* Shape variants */
+.theme-toggle.shape-circle { border-radius: 50%; }
+.theme-toggle.shape-square { border-radius: var(--radius-md); } /* Default for backward compatibility */
+
+/* Corner radius variants for square shape */
+.theme-toggle.shape-square.rounded-sm { border-radius: var(--radius-sm); }
+.theme-toggle.shape-square.rounded-md { border-radius: var(--radius-md); }
+.theme-toggle.shape-square.rounded-lg { border-radius: var(--radius-lg); }
 
 .theme-toggle:hover {
   /* These hover effects are handled by interactive-toggle */

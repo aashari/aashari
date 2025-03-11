@@ -14,6 +14,7 @@ export default function ContactSection() {
       layout="block"
       align="center"
       spacing="md"
+      titleSize="lg"
     >
       <div className="flex flex-wrap justify-center gap-4">
         <SocialLink 
@@ -23,6 +24,7 @@ export default function ContactSection() {
           ariaLabel="Visit Andi Ashari's LinkedIn profile" 
           size="lg"
           variant="default"
+          rounded="md"
         />
         <SocialLink 
           href="https://github.com/aashari" 
@@ -31,6 +33,7 @@ export default function ContactSection() {
           ariaLabel="Visit Andi Ashari's GitHub profile" 
           size="lg"
           variant="default"
+          rounded="md"
         />
         <SocialLink 
           href="https://medium.com/@aashari" 
@@ -39,6 +42,7 @@ export default function ContactSection() {
           ariaLabel="Read Andi Ashari's articles on Medium" 
           size="lg"
           variant="default"
+          rounded="md"
         />
         <SocialLink 
           href="mailto:a.ashari1302@gmail.com" 
@@ -47,6 +51,7 @@ export default function ContactSection() {
           ariaLabel="Send an email to Andi Ashari" 
           size="lg"
           variant="default"
+          rounded="md"
         />
       </div>
     </Section>

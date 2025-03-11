@@ -17,6 +17,7 @@ interface RepositoryProps {
   lastUpdated?: string;
   variant?: 'default' | 'compact' | 'detailed';
   size?: 'sm' | 'md' | 'lg';
+  rounded?: 'none' | 'sm' | 'md' | 'lg';
   className?: string;
 }
 
@@ -31,6 +32,7 @@ export default function Repository({
   isForked = false,
   variant = 'default',
   size = 'md',
+  rounded = 'md',
   className = '',
 }: RepositoryProps) {
   // Function to get language icon
@@ -71,10 +73,13 @@ export default function Repository({
     detailed: 'h-full',
   };
 
+  // Rounded class
+  const roundedClass = `rounded-${rounded}`;
+
   const badgeClasses = "h-6 flex items-center text-xs px-2 py-1 rounded-md border";
 
   return (
-    <div className={`card interactive-card w-full ${sizeClasses[size]} ${variantClasses[variant]} ${className}`}>
+    <div className={`card interactive-card w-full ${sizeClasses[size]} ${variantClasses[variant]} ${roundedClass} ${className}`}>
       <div className="flex items-start justify-between mb-3">
         <h3 className="text-xl font-semibold flex items-center">
           <FaGithub className="icon-primary text-lg mr-2.5 dark:text-primary/90" aria-hidden="true" />
@@ -105,7 +110,7 @@ export default function Repository({
           )}
           {language && (
             <span 
-              className={`${badgeClasses} text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700/50 border-gray-200 dark:border-gray-600 flex items-center gap-1`} 
+              className={`${badgeClasses} text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700/50 border-gray-200 dark:border-gray-600 flex items-center gap-1`}
               title={`Written in ${language}`}
             >
               {getLanguageIcon(language)}
@@ -117,18 +122,20 @@ export default function Repository({
       
       <p className="mb-4 text-muted dark:text-gray-300">{description}</p>
       
-      {topics && topics.length > 0 && (
-        <div className="flex flex-wrap gap-1.5">
-          {topics.map((topic, index) => (
+      <div className="flex flex-wrap gap-1.5">
+        {topics && topics.length > 0 ? (
+          topics.map((topic, index) => (
             <span 
               key={index} 
               className="text-xs bg-primary/5 text-primary/80 dark:bg-primary/10 dark:text-primary/90 px-2 py-0.5 rounded-full border border-primary/10 dark:border-primary/20"
             >
               {topic}
             </span>
-          ))}
-        </div>
-      )}
+          ))
+        ) : (
+          <span className="text-xs text-muted">No topics specified</span>
+        )}
+      </div>
     </div>
   );
 } 

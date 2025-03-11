@@ -4,20 +4,33 @@
   position: relative;
 }
 
+/* Background variants */
+.section.bg-default { background-color: var(--background); }
+.section.bg-primary { background-color: var(--primary); color: var(--foreground); }
+.section.bg-muted { background-color: var(--muted); }
+
+/* Standardized section title */
+.section-title {
+  font-weight: 700;
+  margin-bottom: var(--space-xl); /* 1.5rem, matches mb-6 */
+  color: var(--primary);
+  transition: color 0.2s ease;
+}
+
+/* Hover effect for interactivity */
+.section-title:hover {
+  color: var(--hover);
+}
+
+/* Ensure icons scale with text */
+.section-title svg {
+  min-width: var(--icon-lg);
+  min-height: var(--icon-lg);
+}
+
 .section-header {
   margin-bottom: var(--space-2xl);
   text-align: center;
-}
-
-.section-title {
-  font-size: var(--font-size-2xl);
-  font-weight: 700;
-  margin-bottom: var(--space-md);
-  background: var(--text-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  display: inline-block;
 }
 
 .section-description {
@@ -28,13 +41,20 @@
   line-height: 1.6;
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .section {
     padding: var(--space-2xl) 0;
   }
   
   .section-title {
+    margin-bottom: var(--space-lg); /* 1rem on mobile */
     font-size: var(--font-size-xl);
+  }
+  
+  .section-title svg {
+    min-width: var(--icon-md);
+    min-height: var(--icon-md);
   }
 } 
 
