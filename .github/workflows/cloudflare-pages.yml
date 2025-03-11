@@ -3,7 +3,7 @@ name: Deploy to Cloudflare Pages
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
@@ -19,7 +19,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20.x'
+          node-version: '20.18.2'
           cache: 'npm'
 
       - name: Cache Next.js build
