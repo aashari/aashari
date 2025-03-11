@@ -174,7 +174,7 @@ export default function Home() {
             <ul className="space-y-2">
               <li>Role: AI Operations and Engineering</li>
               <li>Expertise: Cloud infrastructure, automation, and scalable AI solutions</li>
-              <li>Mission: Building scalable, AI-driven systems to revolutionize the digital landscape. <Link href="#projects" className="text-[var(--primary)] underline">See my projects</Link> to learn more.</li>
+              <li>Mission: Building scalable, AI-driven systems to revolutionize the digital landscape.</li>
             </ul>
           </div>
           <div className="card w-full">
