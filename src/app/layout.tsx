@@ -109,27 +109,32 @@ export default function RootLayout({
         <Script id="theme-detector" strategy="beforeInteractive">
           {`
             (function() {
-              // Check if user has a saved preference
-              const savedTheme = localStorage.getItem('theme');
-              const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-              
-              // Apply theme based on saved preference or system preference
-              if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
-                document.documentElement.classList.add('dark');
-              } else {
-                document.documentElement.classList.remove('dark');
-              }
-              
-              // Listen for system preference changes
-              window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-                if (!localStorage.getItem('theme')) {
-                  if (e.matches) {
-                    document.documentElement.classList.add('dark');
-                  } else {
-                    document.documentElement.classList.remove('dark');
-                  }
+              try {
+                // Check if user has a saved preference
+                const savedTheme = localStorage.getItem('theme');
+                const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                
+                // Apply theme based on saved preference or system preference
+                if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+                  document.documentElement.classList.add('dark');
+                } else if (savedTheme === 'light') {
+                  document.documentElement.classList.remove('dark');
                 }
-              });
+                
+                // Listen for system preference changes
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                  if (!localStorage.getItem('theme')) {
+                    if (e.matches) {
+                      document.documentElement.classList.add('dark');
+                    } else {
+                      document.documentElement.classList.remove('dark');
+                    }
+                  }
+                });
+              } catch (e) {
+                // Fallback if localStorage is not available
+                console.warn('Theme detection failed:', e);
+              }
             })();
           `}
         </Script>
