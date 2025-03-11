@@ -70,18 +70,6 @@ Here are some of my favorite creations:
 
 ---
 
-## Publications
-
-- **A Design of Crowd-Based Corruption Prevention System in Indonesia**  
-  Published in *2019 International Conference on Information Management and Technology (ICIMTech)*. Developed a decision support system using heuristic analysis and Google Map API.
-  [Read on IEEE Xplore](https://ieeexplore.ieee.org/document/8843748)  
-
-- **Development of a Web Based Corruption Case Mapping Using Machine Learning**  
-  Published in *2018 International Conference on Information Management and Technology (ICIMTech)*. Built a web app using Backpropagation ANN (96.91% accuracy).
-  [Read on IEEE Xplore](https://ieeexplore.ieee.org/document/8528142)  
-
----
-
 ## Awards & Recognition
 
 - **Top Team at Ericsson Hackathon**  
