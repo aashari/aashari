@@ -1,7 +1,7 @@
 <div align="center">
-  <h1>👋 Hey, I’m Andi Ashari!</h1>
+  <h1>Andi Ashari</h1>
   <p><strong>Tech Wanderer | AI Operations & Engineering | Cloud Innovator</strong></p>
-  <p>Based in Jakarta, Indonesia, I’m redefining the digital landscape with AI, cloud infrastructure, and a passion for sci-fi-inspired innovation.</p>
+  <p>Based in Jakarta, Indonesia, I'm redefining the digital landscape with AI, cloud infrastructure, and a passion for sci-fi-inspired innovation.</p>
 
   <!-- Social Links -->
   <a href="https://andi.ltd"><img src="https://img.shields.io/badge/Portfolio-4A90E2?style=for-the-badge&logo=web&logoColor=white" alt="Portfolio"/></a>
@@ -13,7 +13,8 @@
 
 ---
 
-### 🌟 About Me
+## About Me
+
 - **Role**: AI Operations and Engineering Expert  
 - **Mission**: Building scalable, AI-driven systems to revolutionize the digital landscape  
 - **Tech Stack**:  
@@ -30,63 +31,79 @@
 
 ---
 
-### 🛠️ Featured Projects
+## Featured Projects
+
 Here are some of my favorite creations:
 
-#### 🤖 AI & Automation
+### AI & Automation
+
 - **[Brainy Buddy](https://brainybuddy.app)**  
-  An AI chatbot built with Node.js, MongoDB, GCP, Terraform, and OpenAI API, serving over 35,000 users on LINE and Telegram with 1,400–1,500 daily active users.  
+  An AI chatbot built with Node.js, MongoDB, GCP, Terraform, and OpenAI API, serving over 35,000 users on LINE and Telegram with 1,400–1,500 daily active users.
   - Full-stack development with Node.js and MongoDB  
   - Integrated OpenAI API for conversational capabilities  
   - Deployed on GCP using Terraform  
+
 - **[rag-browser](https://github.com/aashari/rag-browser)**  
   Browser automation tool using Playwright and Bun—perfect for humans and AI workflows.  
+
 - **[nodejs-geocoding](https://github.com/aashari/nodejs-geocoding)**  
   Lightweight TypeScript library for geocoding and reverse geocoding, no dependencies needed.  
 
-#### ☁️ Cloud & Infrastructure
+### Cloud & Infrastructure
+
 - **[terraform-gcp-cloud-run](https://github.com/aashari/terraform-gcp-cloud-run)**  
-  A Terraform module for deploying containerized apps on Google Cloud Run with advanced scaling and networking options.  
+  A Terraform module for deploying containerized apps on Google Cloud Run with advanced scaling and networking options.
+
 - **[terraform-aws-static-website](https://github.com/aashari/terraform-aws-static-website)**  
   Deploy static websites on AWS S3 and CloudFront with custom domain support and CloudFront functions.  
 
-#### 📚 Boilerplates & Templates
+### Boilerplates & Templates
+
 - **[boilerplate-lambda-typescript](https://github.com/aashari/boilerplate-lambda-typescript)**  
   TypeScript AWS Lambda starter with Terraform, DynamoDB, and Datadog integration.  
+
 - **[boilerplate-kubernetes](https://github.com/aashari/boilerplate-kubernetes)**  
   GKE deployment boilerplate with Terraform and GitHub Actions, featuring Go and Node.js.  
+
 - **[boilerplate-rest-api-bun](https://github.com/aashari/boilerplate-rest-api-bun)**  
   Fast REST API boilerplate using Bun, Elysia, and MongoDB.  
 
 ---
 
-### 📜 Publications
+## Publications
+
 - **A Design of Crowd-Based Corruption Prevention System in Indonesia**  
-  Published in *2019 International Conference on Information Management and Technology (ICIMTech)*. Developed a decision support system using heuristic analysis and Google Map API.  
+  Published in *2019 International Conference on Information Management and Technology (ICIMTech)*. Developed a decision support system using heuristic analysis and Google Map API.
   [Read on IEEE Xplore](https://ieeexplore.ieee.org/document/8843748)  
+
 - **Development of a Web Based Corruption Case Mapping Using Machine Learning**  
-  Published in *2018 International Conference on Information Management and Technology (ICIMTech)*. Built a web app using Backpropagation ANN (96.91% accuracy).  
+  Published in *2018 International Conference on Information Management and Technology (ICIMTech)*. Built a web app using Backpropagation ANN (96.91% accuracy).
   [Read on IEEE Xplore](https://ieeexplore.ieee.org/document/8528142)  
 
 ---
 
-### 🏆 Awards & Recognition
-- **Top 3 Team - Ericsson Hackathon**  
+## Awards & Recognition
+
+- **Top Team at Ericsson Hackathon**  
   Developed an enterprise system for fleet tracking using IoT and Machine Learning.  
-- **2nd Runner Up - Kurio Hackathon**  
+
+- **Runner-up at Kurio Hackathon**  
   Created a machine learning-based news recommendation system using the Pearson Correlation algorithm.  
 
 ---
 
-### 🎉 Beyond Code
-- **Sci-Fi Inspiration**: *Interstellar*—its blend of space exploration and human emotion fuels my innovative thinking.  
+## Beyond Code
+
+- **Sci-Fi Inspiration**: *Interstellar*—its blend of space exploration and human emotion fuels my innovative thinking.
 - **Coffee Ritual**: Fueling innovation, one cup at a time ☕  
 - **Next Quest**: Diving deeper into AI-powered infrastructure to build the future.  
 
 ---
 
-### 🌍 Let’s Collaborate!
-I’m always excited to discuss AI, cloud engineering, or sci-fi over a cup of coffee!  
+## Let's Collaborate!
+
+I'm always excited to discuss AI, cloud engineering, or sci-fi over a cup of coffee!  
+
 - **Visit my portfolio**: [andi.ltd](https://andi.ltd)  
 - **Read my articles**: [Medium](https://medium.com/@aashari)  
 - **Connect on LinkedIn**: [LinkedIn](https://www.linkedin.com/in/aashari/)  
@@ -95,7 +112,7 @@ I’m always excited to discuss AI, cloud engineering, or sci-fi over a cup of c
 ---
 
 <div align="center">
-  <i>“Innovation distinguishes between a leader and a follower.” – Steve Jobs</i>
+  <i>"Innovation distinguishes between a leader and a follower." – Steve Jobs</i>
 </div>
 
 ---
