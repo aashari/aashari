@@ -2,6 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
+  output: 'export', // Enable static exports for Cloudflare Pages
+  distDir: 'out', // Specify the output directory
   poweredByHeader: false, // Remove X-Powered-By header for security
   compress: true, // Enable gzip compression
   images: {
@@ -12,6 +14,7 @@ const nextConfig: NextConfig = {
         hostname: 'andi.ltd',
       },
     ],
+    unoptimized: true, // Required for static exports
   },
   // Add HTTP response headers for security and caching
   async headers() {
