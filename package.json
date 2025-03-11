@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "npm run fix-newlines && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "fix-newlines": "find . \\( -type d -name \"out\" -o -name \"node_modules\" -o -name \".next\" -o -name \"build\" -o -name \".vercel\" -o -name \"coverage\" \\) -prune -o -type f -not -path '*/\\.git/*' -exec sh -c 'file \"$1\" | grep -q \"text\" && { echo \"Checking $1\"; git rev-parse --is-inside-work-tree >/dev/null 2>&1 && git check-ignore -q \"$1\" 2>/dev/null && echo \"Skipped (ignored): $1\" || { tail -c1 \"$1\" | grep -q . && echo \"Adding newline to $1\" && echo \"\" >> \"$1\"; }; }' _ {} \\;"
   },
   "dependencies": {
     "next": "15.2.1",

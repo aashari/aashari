@@ -1,0 +1,47 @@
+/* Color variables and gradients */
+:root {
+  /* Text colors */
+  --text-primary: var(--foreground);
+  --text-secondary: var(--muted);
+  --text-accent: var(--primary);
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #4A4A4A 0%, #333333 100%);
+  --text-gradient: linear-gradient(135deg, #333333 0%, #4A4A4A 100%);
+  --card-gradient: linear-gradient(135deg, rgba(252, 251, 250, 0.8) 0%, rgba(249, 248, 246, 0.8) 100%);
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px var(--shadow);
+  --shadow-md: 0 4px 6px var(--shadow);
+  --shadow-lg: 0 10px 15px var(--shadow);
+  --shadow-focus: 0 0 0 2px rgba(74, 74, 74, 0.3);
+  
+  /* Border radius aliases */
+  --border-radius-sm: var(--radius-sm);
+  --border-radius-md: var(--radius-md);
+  --border-radius-lg: var(--radius-lg);
+  
+  /* Font size aliases */
+  --font-size-xs: var(--text-xs);
+  --font-size-sm: var(--text-sm);
+  --font-size-md: var(--text-md);
+  --font-size-lg: var(--text-lg);
+  --font-size-xl: var(--text-xl);
+  --font-size-2xl: var(--text-2xl);
+  --font-size-3xl: var(--text-3xl);
+  --font-size-4xl: var(--text-4xl);
+}
+
+/* Dark mode overrides for gradients and shadows */
+.dark {
+  --gradient-primary: linear-gradient(135deg, #6B7280 0%, #4A4A4A 100%);
+  --text-gradient: linear-gradient(135deg, #E5E3DF 0%, #FFFFFF 100%);
+  --card-gradient: linear-gradient(135deg, rgba(38, 38, 38, 0.8) 0%, rgba(23, 23, 23, 0.8) 100%);
+  
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+  --shadow-focus: 0 0 0 2px rgba(229, 227, 223, 0.3);
+} 
+
+

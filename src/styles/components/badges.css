@@ -1,0 +1,49 @@
+.social-link,
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-sm) var(--space-lg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  color: var(--foreground);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px var(--shadow);
+}
+
+/* Specific styling for buttons inside cards */
+.card .social-link {
+  padding: calc(var(--space-sm) * 0.8) calc(var(--space-lg) * 0.8);
+  font-size: var(--text-sm);
+}
+
+.card .social-link svg {
+  width: var(--icon-sm);
+  height: var(--icon-sm);
+}
+
+.social-link:hover,
+.tech-badge:hover {
+  border-color: var(--primary);
+  transform: scale(1.02);
+  box-shadow: 0 2px 4px var(--shadow);
+  color: var(--hover);
+}
+
+.social-link:focus-visible,
+.tech-badge:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .social-link,
+  .tech-badge {
+    padding: var(--space-sm) var(--space-md); /* Slightly reduced padding on mobile */
+  }
+} 
+
+

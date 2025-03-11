@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import "./globals.css";
 import Script from "next/script";
+import "@/styles/index.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://andi.ltd"),
@@ -142,3 +142,4 @@ export default function RootLayout({
     </html>
   );
 }
+

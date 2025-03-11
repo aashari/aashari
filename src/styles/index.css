@@ -1,0 +1,49 @@
+/* Import Tailwind CSS */
+@import "tailwindcss";
+
+/* Theme (Variables and Colors) */
+@import "./theme/variables.css";
+@import "./theme/colors.css";
+@import "./theme/dark-mode.css";
+
+/* Base styles */
+@import "./base/reset.css";
+@import "./base/typography.css";
+@import "./base/layout.css";
+
+/* Component styles */
+@import "./components/buttons.css";
+@import "./components/cards.css";
+@import "./components/badges.css";
+@import "./components/sections.css";
+@import "./components/grid.css";
+@import "./components/theme-toggle.css";
+
+/* Utility styles (should be loaded last to override component styles) */
+@import "./utilities/animations.css";
+@import "./utilities/helpers.css";
+
+/* Add any global styles below that don't fit in the modular files */
+/* Explicitly set base spacing for body and sections */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  margin: 0;
+  padding: var(--space-3xl) 0;
+  position: relative;
+}
+
+.section:first-of-type {
+  padding-top: 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--space-2xl) 0;
+  }
+}
+
+

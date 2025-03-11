@@ -1,0 +1,49 @@
+/* Base layout styles */
+html, body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Container */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+/* Section layout */
+.section {
+  padding: var(--space-3xl) 0;
+}
+
+.section:first-of-type {
+  padding-top: 0;
+}
+
+/* Footer layout */
+footer {
+  margin-top: var(--space-4xl);
+  margin-bottom: var(--space-4xl);
+  padding: var(--space-3xl) 0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+footer p {
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .section {
+    padding: var(--space-2xl) 0;
+  }
+}
+
+
+

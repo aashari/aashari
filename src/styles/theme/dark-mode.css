@@ -1,0 +1,27 @@
+/* Dark theme */
+.dark {
+  --background: #1A2A44; /* Dark grayish-blue */
+  --foreground: #E5E5E5; /* Light gray text */
+  --primary: #B0B7C3;    /* Lighter gray accent for better visibility */
+  --muted: #9CA3AF;      /* Muted gray for secondary text */
+  --card: #21324F;       /* More distinct card background */
+  --border: #2E4057;     /* Subtle border */
+  --hover: #C5CAD3;      /* Lighter color for hover states */
+  --shadow: rgba(0, 0, 0, 0.2); /* Darker shadow for dark theme */
+}
+
+/* For backwards compatibility with prefers-color-scheme */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --background: #1A2A44; /* Dark grayish-blue */
+    --foreground: #E5E5E5; /* Light gray text */
+    --primary: #B0B7C3;    /* Lighter gray accent for better visibility */
+    --muted: #9CA3AF;      /* Muted gray for secondary text */
+    --card: #21324F;       /* More distinct card background */
+    --border: #2E4057;     /* Subtle border */
+    --hover: #C5CAD3;      /* Lighter color for hover states */
+    --shadow: rgba(0, 0, 0, 0.2); /* Darker shadow for dark theme */
+  }
+} 
+
+
