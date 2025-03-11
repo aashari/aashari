@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { FaLinkedin, FaInstagram, FaEnvelope, FaGithub, FaGraduationCap } from "react-icons/fa";
 import { SiMedium } from "react-icons/si";
 import SocialLink from "../components/SocialLink";
@@ -23,7 +22,7 @@ export default function HeroSection() {
           Tech Wanderer | AI Operations & Engineering | Cloud Innovator
         </p>
         <p className="text-md mb-10 max-w-prose mx-auto">
-          Based in Indonesia, I&apos;m a Tech Wanderer and AI operations expert, specializing in cloud engineering and scalable AI solutions. Explore my work in cloud infrastructure and sci-fi-inspired innovation, or <Link href="#contact" className="text-primary underline">connect with me</Link> to discuss opportunities.
+          Based in Indonesia, I&apos;m a Tech Wanderer and AI operations expert, specializing in cloud engineering and scalable AI solutions.
         </p>
         <div className="flex flex-wrap justify-center gap-4 md:gap-5 mt-10">
           <SocialLink href="https://www.linkedin.com/in/aashari/" icon={<FaLinkedin size={24} />} label="LinkedIn" ariaLabel="Visit Andi Ashari's LinkedIn profile" />
