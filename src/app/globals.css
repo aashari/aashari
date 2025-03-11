@@ -2,12 +2,12 @@
 
 :root {
   /* Light theme (default) */
-  --background: rgb(229, 229, 229); /* Light gray background */
+  --background: rgb(249, 248, 246); /* Soft cream/off-white background */
   --foreground: #333333; /* Dark gray text for contrast */
-  --primary: #555555;    /* Medium gray accent instead of blue */
+  --primary: #555555;    /* Medium gray accent */
   --muted: #6B7280;      /* Muted gray for secondary text */
-  --card: rgb(240, 240, 240); /* Slightly lighter gray for cards, low contrast */
-  --border: #D1D5DB;     /* Light border color */
+  --card: rgb(255, 255, 253); /* Slightly lighter than background, low contrast */
+  --border: #E5E3DF;     /* Light border color that matches the background tone */
 }
 
 @media (prefers-color-scheme: dark) {
