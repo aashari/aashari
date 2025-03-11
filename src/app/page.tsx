@@ -7,6 +7,7 @@ import { SiMedium, SiTerraform, SiTypescript, SiGo, SiPython } from "react-icons
 import { HiSparkles } from "react-icons/hi";
 import Script from "next/script";
 import Section from "./components/Section";
+import ThemeToggle from "./components/ThemeToggle";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -97,6 +98,8 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
+      <ThemeToggle />
+      
       {/* JSON-LD Structured Data */}
       <Script
         id="schema-person"

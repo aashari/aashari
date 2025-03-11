@@ -43,9 +43,21 @@
   --text-4xl: 2.5rem;    /* 40px */
 }
 
+/* Dark theme */
+.dark {
+  --background: #1A2A44; /* Dark grayish-blue */
+  --foreground: #E5E5E5; /* Light gray text */
+  --primary: #B0B7C3;    /* Lighter gray accent for better visibility */
+  --muted: #9CA3AF;      /* Muted gray for secondary text */
+  --card: #21324F;       /* More distinct card background */
+  --border: #2E4057;     /* Subtle border */
+  --hover: #C5CAD3;      /* Lighter color for hover states */
+  --shadow: rgba(0, 0, 0, 0.2); /* Darker shadow for dark theme */
+}
+
+/* For backwards compatibility with prefers-color-scheme */
 @media (prefers-color-scheme: dark) {
-  :root {
-    /* Dark theme */
+  :root:not(.light) {
     --background: #1A2A44; /* Dark grayish-blue */
     --foreground: #E5E5E5; /* Light gray text */
     --primary: #B0B7C3;    /* Lighter gray accent for better visibility */
@@ -280,6 +292,10 @@ ul li::before {
   }
 }
 
+.dark ::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--muted), #FFFFFF 20%);
+}
+
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
@@ -360,3 +376,41 @@ footer p {
 /* Additional spacing utilities */
 .my-2 { margin-top: 0.5rem; margin-bottom: 0.5rem; }
 .py-xl { padding-top: var(--space-xl); padding-bottom: var(--space-xl); }
+
+/* Theme toggle button */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 5px var(--shadow);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--shadow);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .theme-toggle {
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 36px;
+    height: 36px;
+  }
+}

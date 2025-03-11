@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Script from "next/script";
 
@@ -68,13 +68,26 @@ export const metadata: Metadata = {
   }
 };
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: 'rgb(249, 248, 246)' },
+    { media: '(prefers-color-scheme: dark)', color: '#1A2A44' }
+  ],
+  colorScheme: 'light dark',
+  width: 'device-width',
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        <meta name="color-scheme" content="light dark" />
+      </head>
       <body className="antialiased">
         {children}
         
@@ -89,6 +102,35 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-5QSFSH6TZR');
+          `}
+        </Script>
+        
+        {/* Theme detection script */}
+        <Script id="theme-detector" strategy="beforeInteractive">
+          {`
+            (function() {
+              // Check if user has a saved preference
+              const savedTheme = localStorage.getItem('theme');
+              const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+              
+              // Apply theme based on saved preference or system preference
+              if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+                document.documentElement.classList.add('dark');
+              } else {
+                document.documentElement.classList.remove('dark');
+              }
+              
+              // Listen for system preference changes
+              window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                if (!localStorage.getItem('theme')) {
+                  if (e.matches) {
+                    document.documentElement.classList.add('dark');
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                  }
+                }
+              });
+            })();
           `}
         </Script>
       </body>
