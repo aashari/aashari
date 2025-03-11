@@ -14,9 +14,14 @@ I'm a Cloud Infrastructure Engineer working in Indonesia, I like Sci-Fi movie an
 
 ##### Active Public Repositories
 
+- [aashari/terraform-gcp-cloud-run](https://github.com/aashari/terraform-gcp-cloud-run)
+- [aashari/nodejs-geocoding](https://github.com/aashari/nodejs-geocoding)
+- [aashari/rag-browser](https://github.com/aashari/rag-browser) <-- AI Compatible
+- [aashari/rag-aws-ssm](https://github.com/aashari/rag-aws-ssm) <-- AI Compatible
+
+##### Haven't Been Updated for Years (but still active)
+
+- [aashari/boilerplate-rest-api-bun](https://github.com/aashari/boilerplate-rest-api-bun)
 - [aashari/boilerplate-kubernetes](https://github.com/aashari/boilerplate-kubernetes)
 - [aashari/boilerplate-lambda-typescript](https://github.com/aashari/boilerplate-lambda-typescript)
-- [aashari/boilerplate-rest-api-bun](https://github.com/aashari/boilerplate-rest-api-bun)
-- [aashari/nodejs-geocoding](https://github.com/aashari/nodejs-geocoding)
 - [aashari/terraform-aws-static-website](https://github.com/aashari/terraform-aws-static-website)
-- [aashari/terraform-gcp-cloud-run](https://github.com/aashari/terraform-gcp-cloud-run)
