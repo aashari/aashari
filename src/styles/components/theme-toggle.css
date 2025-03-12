@@ -1,62 +1,75 @@
-/* Theme toggle button */
+/* Theme toggle button - basic structure */
 .theme-toggle {
   position: fixed;
-  /* Position and size now controlled by props */
-  /* Default values as fallbacks */
   top: var(--space-lg);
   right: var(--space-lg);
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Width and height now controlled by props */
   width: var(--button-size-lg);
   height: var(--button-size-lg);
-  border-radius: 50%; /* Default circle shape - will be overridden by shape classes */
-  background-color: var(--card);
-  border: 1px solid var(--border);
+  border-radius: 50%;
   padding: 0;
-  
-  /* These styles handled by interactive-toggle */
-  cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  /* Background color will be set based on dark/light mode */
+  /* Note: transition, box-shadow, cursor, and hover effects are handled by interactive-toggle class */
 }
 
-/* Shape variants */
-.theme-toggle.shape-circle { border-radius: 50%; }
-.theme-toggle.shape-square { border-radius: var(--radius-md); } /* Default for backward compatibility */
-
-/* Corner radius variants for square shape */
-.theme-toggle.shape-square.rounded-sm { border-radius: var(--radius-sm); }
-.theme-toggle.shape-square.rounded-md { border-radius: var(--radius-md); }
-.theme-toggle.shape-square.rounded-lg { border-radius: var(--radius-lg); }
-
-.theme-toggle:hover {
-  /* These hover effects are handled by interactive-toggle */
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--primary);
-  filter: brightness(1.1);
+/* In light mode: toggle uses dark mode background */
+:root:not(.dark) .theme-toggle {
+  background-color: #1A2A44; /* Dark mode background */
+  border-color: #2E4057; /* Dark mode border */
 }
 
-/* Focus styles are now handled by interactive-toggle:focus-visible */
-/* Remove this duplicated rule and use className="theme-toggle interactive-toggle" */
+/* In dark mode: toggle uses light mode background */
+.dark .theme-toggle {
+  background-color: rgb(249, 248, 246); /* Light mode background */
+  border-color: #E5E3DF; /* Light mode border */
+}
 
+/* Icon container */
 .theme-toggle-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
 }
 
-.theme-toggle-icon.rotating {
+/* Icon sizing */
+.theme-toggle-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Icon colors - inverted for each mode */
+/* In light mode: sun icon uses light mode background color */
+:root:not(.dark) .theme-toggle-icon.light-mode svg {
+  color: rgb(249, 248, 246); /* Light mode background */
+}
+
+/* In dark mode: moon icon uses dark mode background color */
+.dark .theme-toggle-icon.dark-mode svg {
+  color: #1A2A44; /* Dark mode background */
+}
+
+/* System mode icon - distinct color in both modes */
+:root:not(.dark) .theme-toggle-icon.system-mode svg {
+  color: #B0B7C3; /* Dark mode primary (lighter gray) */
+}
+
+.dark .theme-toggle-icon.system-mode svg {
+  color: #4A4A4A; /* Light mode primary (darker gray) */
+}
+
+/* Add rotation animation when clicked */
+.theme-toggle:active .theme-toggle-icon {
   transform: rotate(180deg);
 }
 
+/* Simple placeholder for hydration */
 .theme-toggle-placeholder {
   position: fixed;
-  /* Position and size controlled by props - same as .theme-toggle */
   top: var(--space-lg);
   right: var(--space-lg);
   width: var(--button-size-lg);
@@ -64,20 +77,25 @@
   z-index: 100;
 }
 
-/* Fallback responsive behavior for backward compatibility */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .theme-toggle:not([class*="w-"]):not([class*="h-"]) {
+  .theme-toggle {
     top: var(--space-md);
     right: var(--space-md);
     width: var(--button-size-md);
     height: var(--button-size-md);
   }
   
-  .theme-toggle-placeholder:not([class*="w-"]):not([class*="h-"]) {
+  .theme-toggle-placeholder {
     top: var(--space-md);
     right: var(--space-md);
     width: var(--button-size-md);
     height: var(--button-size-md);
+  }
+  
+  .theme-toggle-icon svg {
+    width: 18px;
+    height: 18px;
   }
 } 
 

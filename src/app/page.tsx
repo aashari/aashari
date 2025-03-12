@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
 import ThemeToggle from "@/components/ThemeToggle";
 import SchemaData from "@/components/SchemaData";
 import HeroSection from "@/sections/HeroSection";
@@ -14,11 +13,6 @@ import ContactSection from "@/sections/ContactSection";
 import Footer from "@/sections/Footer";
 
 export default function Home() {
-  // Effect to handle scroll events
-  useEffect(() => {
-    // Any other scroll-related functionality can go here
-  }, []);
-
   return (
     <main className="min-h-screen py-12">
       <ThemeToggle />
