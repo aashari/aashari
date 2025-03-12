@@ -13,7 +13,7 @@ export default function AboutSection() {
       icon={<HiSparkles className="icon-primary mr-2" size={24} />} 
       id="about"
       layout="grid"
-      columns={2}
+      columns={1}
       spacing="md"
       titleSize="lg"
     >
