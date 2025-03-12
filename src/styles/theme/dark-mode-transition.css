@@ -1,0 +1,31 @@
+/* Theme transition CSS */
+.theme-transition {
+  /* Apply to all theme-specific properties for a smooth transition */
+  transition: 
+    background-color 0.5s ease, 
+    color 0.5s ease, 
+    border-color 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+/* Apply to specific elements that might need special transition handling */
+.theme-transition .card,
+.theme-transition button,
+.theme-transition .section-title,
+.theme-transition .profile-image,
+.theme-transition .text-primary,
+.theme-transition .text-muted {
+  transition: 
+    background-color 0.5s ease, 
+    color 0.5s ease, 
+    border-color 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+/* Exclude animations from reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .theme-transition,
+  .theme-transition * {
+    transition: none !important;
+  }
+} 

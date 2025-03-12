@@ -10,10 +10,12 @@
     "fix-newlines": "find . \\( -type d -name \"out\" -o -name \"node_modules\" -o -name \".next\" -o -name \"build\" -o -name \".vercel\" -o -name \"coverage\" \\) -prune -o -type f -not -path '*/\\.git/*' -exec sh -c 'file \"$1\" | grep -q \"text\" && { echo \"Checking $1\"; git rev-parse --is-inside-work-tree >/dev/null 2>&1 && git check-ignore -q \"$1\" 2>/dev/null && echo \"Skipped (ignored): $1\" || { tail -c1 \"$1\" | grep -q . && echo \"Adding newline to $1\" && echo \"\" >> \"$1\"; }; }' _ {} \\;"
   },
   "dependencies": {
+    "framer-motion": "^12.5.0",
     "next": "15.2.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-icons": "^5.5.0"
+    "react-icons": "^5.5.0",
+    "react-intersection-observer": "^9.16.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

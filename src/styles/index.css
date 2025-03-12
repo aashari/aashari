@@ -5,6 +5,7 @@
 @import "./theme/variables.css";
 @import "./theme/colors.css";
 @import "./theme/dark-mode.css";
+@import "./theme/dark-mode-transition.css";
 
 /* Base styles */
 @import "./base/reset.css";
@@ -17,6 +18,9 @@
 @import "./components/sections.css";
 @import "./components/grid.css";
 @import "./components/theme-toggle.css";
+
+/* Animation styles */
+@import "./animations/keyframes.css";
 
 /* Utility styles (should be loaded last to override component styles) */
 @import "./utilities/animations.css";

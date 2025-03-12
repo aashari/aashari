@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { FaSun, FaMoon, FaDesktop } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+import { useReducedMotion } from 'framer-motion';
 
 // Simplified props - only keeping className as it's a standard prop
 interface ThemeToggleProps {
@@ -14,6 +16,7 @@ export default function ThemeToggle({
   const [theme, setTheme] = useState<'light' | 'dark' | 'system'>('system');
   const [systemPreference, setSystemPreference] = useState<'light' | 'dark'>('light');
   const [mounted, setMounted] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
   
   useEffect(() => {
     setMounted(true);
@@ -53,11 +56,19 @@ export default function ThemeToggle({
     
     const root = document.documentElement;
     
+    // Add transition class first for smooth theme change
+    root.classList.add('theme-transition');
+    
     if (newTheme === 'dark') {
       root.classList.add('dark');
     } else {
       root.classList.remove('dark');
     }
+    
+    // Remove transition class after animation completes
+    setTimeout(() => {
+      root.classList.remove('theme-transition');
+    }, 500);
   };
   
   const toggleTheme = () => {
@@ -98,18 +109,57 @@ export default function ThemeToggle({
     );
   }
   
+  // Animation variants
+  const buttonVariants = {
+    hover: { 
+      scale: 1.1,
+      boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)", 
+    },
+    tap: { 
+      scale: 0.9,
+    },
+  };
+  
+  const iconVariants = {
+    initial: { 
+      rotate: 0 
+    },
+    animate: { 
+      rotate: 360,
+      transition: { 
+        duration: 0.5 
+      } 
+    },
+  };
+  
+  // Skip animations if user prefers reduced motion
+  const shouldAnimate = !prefersReducedMotion;
+  
   return (
-    <button 
+    <motion.button 
       onClick={toggleTheme}
       className={`theme-toggle interactive-toggle ${className}`}
       aria-label={`Switch to ${theme === 'light' ? 'dark' : theme === 'dark' ? 'system' : 'light'} theme`}
       title={`Current theme: ${theme === 'system' ? `System (${systemPreference})` : theme}`}
+      whileHover={shouldAnimate ? buttonVariants.hover : undefined}
+      whileTap={shouldAnimate ? buttonVariants.tap : undefined}
+      transition={{ 
+        type: "spring", 
+        stiffness: 400, 
+        damping: 10 
+      }}
     >
-      <div className={`theme-toggle-icon ${themeClass}`}>
+      <motion.div 
+        className={`theme-toggle-icon ${themeClass}`}
+        key={theme} // Key changes cause animation to restart
+        initial={shouldAnimate ? "initial" : undefined}
+        animate={shouldAnimate ? "animate" : undefined}
+        variants={iconVariants}
+      >
         {theme === 'light' && <FaSun />}
         {theme === 'dark' && <FaMoon />}
         {theme === 'system' && <FaDesktop />}
-      </div>
-    </button>
+      </motion.div>
+    </motion.button>
   );
 } 

@@ -1,48 +1,81 @@
 "use client";
 
+import { ReactNode } from 'react';
+import { motion } from 'framer-motion';
+import { useReducedMotion } from 'framer-motion';
+
 interface TechBadgeProps {
   label: string;
-  icon: React.ReactNode;
-  ariaLabel: string;
+  icon?: ReactNode;
+  color?: 'primary' | 'muted' | 'accent';
   size?: 'sm' | 'md' | 'lg';
-  color?: 'default' | 'primary' | 'muted';
-  rounded?: 'none' | 'sm' | 'md' | 'lg';
+  rounded?: 'sm' | 'md' | 'lg' | 'full';
+  ariaLabel?: string;
   className?: string;
 }
 
-export default function TechBadge({ 
-  label, 
-  icon, 
-  ariaLabel, 
-  size = 'md', 
-  color = 'default',
-  rounded = 'sm',
-  className = '' 
+export default function TechBadge({
+  label,
+  icon,
+  color = 'primary',
+  size = 'md',
+  rounded = 'full',
+  ariaLabel,
+  className = '',
 }: TechBadgeProps) {
-  // Combined class mapping for size and color
-  const classMap = {
-    'default-sm': 'tech-badge interactive-card text-xs py-1 px-2 gap-1',
-    'default-md': 'tech-badge interactive-card text-sm py-1.5 px-3 gap-2',
-    'default-lg': 'tech-badge interactive-card text-md py-2 px-4 gap-3',
-    'primary-sm': 'tech-badge interactive-card text-primary border-primary/20 text-xs py-1 px-2 gap-1',
-    'primary-md': 'tech-badge interactive-card text-primary border-primary/20 text-sm py-1.5 px-3 gap-2',
-    'primary-lg': 'tech-badge interactive-card text-primary border-primary/20 text-md py-2 px-4 gap-3',
-    'muted-sm': 'tech-badge interactive-card text-muted border-muted/20 text-xs py-1 px-2 gap-1',
-    'muted-md': 'tech-badge interactive-card text-muted border-muted/20 text-sm py-1.5 px-3 gap-2',
-    'muted-lg': 'tech-badge interactive-card text-muted border-muted/20 text-md py-2 px-4 gap-3',
+  const prefersReducedMotion = useReducedMotion();
+  
+  // Colors based on theme
+  const colorClasses = {
+    primary: 'bg-background text-primary border-primary',
+    muted: 'bg-background text-muted border-muted',
+    accent: 'bg-primary text-background border-primary',
   };
-
-  const baseClass = classMap[`${color}-${size}`] || classMap['default-md'];
-  const roundedClass = `rounded-${rounded}`;
+  
+  // Size styles
+  const sizeClasses = {
+    sm: 'px-2 py-1 text-xs',
+    md: 'px-3 py-1 text-sm',
+    lg: 'px-4 py-2 text-md',
+  };
+  
+  // Rounded corner styles
+  const roundedClasses = {
+    sm: 'rounded-sm',
+    md: 'rounded-md',
+    lg: 'rounded-lg',
+    full: 'rounded-full',
+  };
+  
+  // Animation variants
+  const badgeVariants = {
+    hover: {
+      scale: 1.05,
+      y: -2,
+      boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+      transition: {
+        type: 'spring',
+        stiffness: 400,
+        damping: 10,
+      },
+    },
+    tap: {
+      scale: 0.95,
+    },
+  };
+  
+  // Apply animations only if the user doesn't prefer reduced motion
+  const shouldAnimate = !prefersReducedMotion;
 
   return (
-    <div
-      className={`${baseClass} ${roundedClass} ${className}`}
-      role="img"
-      aria-label={ariaLabel}
+    <motion.div
+      className={`tech-badge inline-flex items-center border gap-2 ${colorClasses[color]} ${sizeClasses[size]} ${roundedClasses[rounded]} ${className}`}
+      title={ariaLabel || `Skilled in ${label}`}
+      whileHover={shouldAnimate ? badgeVariants.hover : undefined}
+      whileTap={shouldAnimate ? badgeVariants.tap : undefined}
     >
-      {icon}
-      <span>{label}</span>
-    </div>
+      {icon && <span className="badge-icon">{icon}</span>}
+      <span className="badge-text font-medium">{label}</span>
+    </motion.div>
   );
-} 
+}
