@@ -31,45 +31,6 @@
 
 ---
 
-## Featured Projects
-
-Here are some of my favorite creations:
-
-### AI & Automation
-
-- **[Brainy Buddy](https://brainybuddy.app)**  
-  An AI chatbot built with Node.js, MongoDB, GCP, Terraform, and OpenAI API, serving over 35,000 users on LINE and Telegram with 1,400–1,500 daily active users.
-  - Full-stack development with Node.js and MongoDB  
-  - Integrated OpenAI API for conversational capabilities  
-  - Deployed on GCP using Terraform  
-
-- **[rag-browser](https://github.com/aashari/rag-browser)**  
-  Browser automation tool using Playwright and Bun—perfect for humans and AI workflows.  
-
-- **[nodejs-geocoding](https://github.com/aashari/nodejs-geocoding)**  
-  Lightweight TypeScript library for geocoding and reverse geocoding, no dependencies needed.  
-
-### Cloud & Infrastructure
-
-- **[terraform-gcp-cloud-run](https://github.com/aashari/terraform-gcp-cloud-run)**  
-  A Terraform module for deploying containerized apps on Google Cloud Run with advanced scaling and networking options.
-
-- **[terraform-aws-static-website](https://github.com/aashari/terraform-aws-static-website)**  
-  Deploy static websites on AWS S3 and CloudFront with custom domain support and CloudFront functions.  
-
-### Boilerplates & Templates
-
-- **[boilerplate-lambda-typescript](https://github.com/aashari/boilerplate-lambda-typescript)**  
-  TypeScript AWS Lambda starter with Terraform, DynamoDB, and Datadog integration.  
-
-- **[boilerplate-kubernetes](https://github.com/aashari/boilerplate-kubernetes)**  
-  GKE deployment boilerplate with Terraform and GitHub Actions, featuring Go and Node.js.  
-
-- **[boilerplate-rest-api-bun](https://github.com/aashari/boilerplate-rest-api-bun)**  
-  Fast REST API boilerplate using Bun, Elysia, and MongoDB.  
-
----
-
 ## Beyond Code
 
 - **Sci-Fi Inspiration**: *Interstellar*—its blend of space exploration and human emotion fuels my innovative thinking.
@@ -82,10 +43,11 @@ Here are some of my favorite creations:
 
 I'm always excited to discuss AI, cloud engineering, or sci-fi over a cup of coffee!  
 
-- **Visit my portfolio**: [andi.ltd](https://andi.ltd)  
 - **Read my articles**: [Medium](https://medium.com/@aashari)  
 - **Connect on LinkedIn**: [LinkedIn](https://www.linkedin.com/in/aashari/)  
 - **Email me**: [a.ashari1302@gmail.com](mailto:a.ashari1302@gmail.com)  
+
+[andi.ltd](https://andi.ltd)  
 
 ---
 
