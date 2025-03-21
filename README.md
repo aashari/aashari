@@ -19,16 +19,6 @@ I specialize in cloud infrastructure and AI operations, with experience building
 
 ---
 
-### Featured Projects
-
-- **[AWS ECS Blue/Green Deployment](https://github.com/aashari/terraform-aws-ecs-bluegreen)** - Terraform IaC for zero-downtime deployments
-- **[Bun REST API Boilerplate](https://github.com/aashari/boilerplate-bun-restapi)** - Modern API template with TypeScript
-- **[Go Tax Calculator API](https://github.com/aashari/restapi-go-tax-calculator)** - Containerized Go application
-- **[GCP Cloud Run Infrastructure](https://github.com/aashari/terraform-gcp-cloud-run)** - Terraform modules for serverless containers
-- **[AWS Lambda TypeScript](https://github.com/aashari/boilerplate-lambda-typescript)** - Production-ready TypeScript boilerplate
-
----
-
 ### Current Focus
 
 I'm currently working on AI-powered infrastructure and building scalable pipelines for model deployment and monitoring. I'm passionate about cloud-native solutions and infrastructure automation.
