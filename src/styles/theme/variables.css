@@ -1,13 +1,13 @@
 :root {
   /* Light theme (default) */
   --background: rgb(249, 248, 246); /* Soft cream/off-white background */
-  --foreground: #333333; /* Dark gray text for contrast */
-  --primary: #4A4A4A;    /* Darker gray accent for better distinction */
-  --muted: #6B7280;      /* Muted gray for secondary text */
+  --foreground: #666666; /* Dark gray text for contrast */
+  --primary: #777777;    /* Darker gray accent for better distinction */
+  --muted: #888888;      /* Muted gray for secondary text */
   --card: rgb(252, 251, 250); /* Slightly more distinct card background */
-  --border: #E5E3DF;     /* Light border color that matches the background tone */
+  --border: rgba(0, 0, 0, 0.05);     /* Light border color that matches the background tone */
   --hover: #555555;      /* Slightly darker for hover states */
-  --shadow: rgba(0, 0, 0, 0.05); /* Consistent shadow color */
+  --shadow: rgba(0, 0, 0, 0.03); /* Consistent shadow color */
   
   /* Spacing variables */
   --space-xs: 0.25rem;   /* 4px */

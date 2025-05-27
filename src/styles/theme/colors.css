@@ -34,14 +34,14 @@
 
 /* Dark mode overrides for gradients and shadows */
 .dark {
-  --gradient-primary: linear-gradient(135deg, #6B7280 0%, #4A4A4A 100%);
-  --text-gradient: linear-gradient(135deg, #E5E3DF 0%, #FFFFFF 100%);
-  --card-gradient: linear-gradient(135deg, rgba(38, 38, 38, 0.8) 0%, rgba(23, 23, 23, 0.8) 100%);
+  --gradient-primary: linear-gradient(135deg, #888888 0%, #6B7280 100%);
+  --text-gradient: linear-gradient(135deg, #CCCCCC 0%, #E5E3DF 100%);
+  --card-gradient: linear-gradient(135deg, rgba(48, 48, 48, 0.8) 0%, rgba(33, 33, 33, 0.8) 100%);
   
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
-  --shadow-focus: 0 0 0 2px rgba(229, 227, 223, 0.3);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.4);
+  --shadow-focus: 0 0 0 2px rgba(229, 227, 223, 0.2);
 } 
 
 
