@@ -27,6 +27,8 @@ export const metadata: Metadata = {
   // Add Open Graph metadata
   openGraph: {
     type: "profile",
+    url: "https://andi.ltd",
+    siteName: "Andi Ashari",
     title: "Andi Ashari | AI Operations & Engineering Expert",
     description: "Tech Wanderer and AI operations expert, specializing in cloud engineering and scalable AI solutions.",
     images: [
@@ -41,10 +43,11 @@ export const metadata: Metadata = {
   // Add Twitter card metadata
   twitter: {
     card: "summary",
+    site: "@antd1_",
     title: "Andi Ashari | AI Operations & Engineering Expert",
     description: "Tech Wanderer and AI operations expert, specializing in cloud engineering and scalable AI solutions.",
     images: ["/profile.jpeg"],
-    creator: "@aashari",
+    creator: "@antd1_",
   },
   // Add canonical URL
   alternates: {
