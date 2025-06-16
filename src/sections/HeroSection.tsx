@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { FaLinkedin, FaInstagram, FaEnvelope, FaGithub, FaGraduationCap } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaEnvelope, FaGithub, FaGraduationCap, FaTwitter } from "react-icons/fa";
 import { SiMedium } from "react-icons/si";
 import SocialLink from "../components/SocialLink";
 import FadeInSection from "@/animations/FadeInSection";
@@ -90,6 +90,7 @@ export default function HeroSection() {
         >
           <motion.div variants={item}><SocialLink href="https://www.linkedin.com/in/aashari/" icon={<FaLinkedin size={24} />} label="LinkedIn" ariaLabel="Visit Andi Ashari's LinkedIn profile" /></motion.div>
           <motion.div variants={item}><SocialLink href="https://www.instagram.com/ant.dhe/" icon={<FaInstagram size={24} />} label="Instagram" ariaLabel="Visit Andi Ashari's Instagram profile" /></motion.div>
+          <motion.div variants={item}><SocialLink href="https://twitter.com/antd1_" icon={<FaTwitter size={24} />} label="Twitter" ariaLabel="Visit Andi Ashari's Twitter profile" /></motion.div>
           <motion.div variants={item}><SocialLink href="https://medium.com/@aashari" icon={<SiMedium size={24} />} label="Medium" ariaLabel="Read Andi Ashari's articles on Medium" /></motion.div>
           <motion.div variants={item}><SocialLink href="mailto:a.ashari1302@gmail.com" icon={<FaEnvelope size={24} />} label="Email" ariaLabel="Send an email to Andi Ashari" /></motion.div>
           <motion.div variants={item}><SocialLink href="https://github.com/aashari" icon={<FaGithub size={24} />} label="GitHub" ariaLabel="View Andi Ashari's projects on GitHub" /></motion.div>

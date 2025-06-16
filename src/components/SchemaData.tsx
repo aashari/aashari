@@ -14,6 +14,7 @@ export default function SchemaData() {
     "sameAs": [
       "https://www.linkedin.com/in/aashari/",
       "https://github.com/aashari",
+      "https://twitter.com/antd1_",
       "https://www.instagram.com/ant.dhe/",
       "https://medium.com/@aashari",
       "https://scholar.google.co.id/citations?user=bLmnPS8AAAAJ&hl=en"
